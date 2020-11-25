@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_243" data-name="Rectangle 243" width="24" height="24" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="XMLID_1_" opacity="0.54" clip-path="url(#clip-path)">
+    <path id="Path_238" data-name="Path 238" d="M3,9v6H7l5,5V4L7,9Zm13.5,3A4.344,4.344,0,0,0,14,8v8A4.344,4.344,0,0,0,16.5,12ZM14,3.2V5.3a6.989,6.989,0,0,1,0,13.4v2.1A9.031,9.031,0,0,0,14,3.2Z"/>
+    <rect id="Rectangle_242" data-name="Rectangle 242" width="24" height="24" fill="none"/>
+  </g>
+</svg>

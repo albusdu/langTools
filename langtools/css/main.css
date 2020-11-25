@@ -1,0 +1,425 @@
+@font-face {
+  font-family: 'Noto Sans Georgian Semi';
+  src: url('../fonts/NotoSansGeorgian-SemiBold.eot');
+  src: url('../fonts/NotoSansGeorgian-SemiBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/NotoSansGeorgian-SemiBold.woff2') format('woff2'),
+    url('../fonts/NotoSansGeorgian-SemiBold.woff') format('woff'),
+    url('../fonts/NotoSansGeorgian-SemiBold.ttf') format('truetype'),
+    url('../fonts/NotoSansGeorgian-SemiBold.svg#NotoSansGeorgian-SemiBold')
+      format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans Georgian Bold';
+  src: url('../fonts/NotoSansGeorgian-Bold.eot');
+  src: url('../fonts/NotoSansGeorgian-Bold.eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/NotoSansGeorgian-Bold.woff2') format('woff2'),
+    url('../fonts/NotoSansGeorgian-Bold.woff') format('woff'),
+    url('../fonts/NotoSansGeorgian-Bold.ttf') format('truetype'),
+    url('../fonts/NotoSansGeorgian-Bold.svg#NotoSansGeorgian-Bold')
+      format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans Georgian Regular';
+  src: url('../fonts/NotoSansGeorgian-Regular.eot');
+  src: url('../fonts/NotoSansGeorgian-Regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/NotoSansGeorgian-Regular.woff2') format('woff2'),
+    url('../fonts/NotoSansGeorgian-Regular.woff') format('woff'),
+    url('../fonts/NotoSansGeorgian-Regular.ttf') format('truetype'),
+    url('../fonts/NotoSansGeorgian-Regular.svg#NotoSansGeorgian-Regular')
+      format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('../fonts/Roboto-Regular.eot');
+  src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto-Regular.svg#Roboto-Regular') format('svg'),
+    url('../fonts/Roboto-Regular.ttf') format('truetype'),
+    url('../fonts/Roboto-Regular.woff') format('woff'),
+    url('../fonts/Roboto-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url('../fonts/Roboto-Medium.eot');
+  src: url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto-Medium.svg#Roboto-Medium') format('svg'),
+    url('../fonts/Roboto-Medium.ttf') format('truetype'),
+    url('../fonts/Roboto-Medium.woff') format('woff'),
+    url('../fonts/Roboto-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('../fonts/Roboto-Bold.eot');
+  src: url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto-Bold.svg#Roboto-Bold') format('svg'),
+    url('../fonts/Roboto-Bold.ttf') format('truetype'),
+    url('../fonts/Roboto-Bold.woff') format('woff'),
+    url('../fonts/Roboto-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  /*background: #FAFAFA;*/
+}
+
+* {
+  font-family: 'Roboto-Medium', 'Noto Sans Georgian Semi';
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+  outline-color: none;
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+body {
+  position: relative;
+  margin: 0;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  min-height: 100vh;
+}
+ul,
+li,
+p,
+img,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+nav {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-weight: normal;
+}
+input,
+textarea {
+  outline: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+svg {
+  flex-shrink: 0;
+}
+.regular {
+  font-family: 'Roboto-Regular', 'Noto Sans Georgian Regular';
+}
+.medium {
+  font-family: 'Roboto-Medium', 'Noto Sans Georgian Semi';
+}
+.bold {
+  font-family: 'Roboto-Bold', 'Noto Sans Georgian Bold';
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.text {
+  font-size: 16px;
+  font-family: 'Roboto-Regular';
+}
+.font-12 {
+  font-size: 12px;
+}
+.font-20 {
+  font-size: 20px;
+}
+main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container {
+  padding: 0 105px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.flex-box {
+  display: flex;
+}
+.flex-box.column {
+  flex-direction: column;
+}
+.flex-box.al-center {
+  align-items: center;
+}
+.flex-box.justify-center {
+  justify-content: center;
+}
+.flex-box.between {
+  justify-content: space-between;
+}
+.flex-box.wrap {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1679px) {
+  .container {
+    padding: 0 74px;
+  }
+}
+
+@media (max-width: 1365px) {
+  .container {
+    padding: 0 47px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .container {
+    padding: 0 45px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-left: 21px;
+    padding-right: 22px;
+  }
+}
+
+/* Changeable Styles */
+.text-color {
+  color: #eb4d4b;
+}
+.bg-color {
+  background: #eb4d4b;
+}
+/* Red Styles */
+body.color-red .text-color {
+  color: #eb4d4b;
+}
+body.color-red .bg-color {
+  background: #eb4d4b;
+}
+body.color-red .path-color path {
+  fill: #eb4d4b;
+}
+body.color-red .path-color path {
+  fill: #eb4d4b;
+}
+body.color-red .hoverColor:hover .path-color-hovered path,
+body.color-red .hoverColor.active .path-color-hovered path {
+  fill: #eb4d4b;
+}
+body.color-red .active span,
+body.color-red .has-submenu.active a.open-inside-nav {
+  color: #eb4d4b;
+}
+body.color-red .hoverColor:hover,
+body.color-red .hoverColor.active {
+  color: #eb4d4b;
+}
+
+/* Blue Styles */
+body.color-blue .text-color {
+  color: #3742fa;
+}
+body.color-blue .bg-color {
+  background: #3742fa;
+}
+body.color-blue .path-color path {
+  fill: #3742fa;
+}
+body.color-blue .stroke-color path {
+  stroke: #3742fa;
+}
+body.color-blue .hoverColor:hover .path-color-hovered path,
+body.color-blue .hoverColor.active .path-color-hovered path {
+  fill: #3742fa;
+}
+body.color-blue .active span,
+body.color-blue .has-submenu.active a.open-inside-nav {
+  color: #3742fa;
+}
+body.color-blue .hoverColor:hover,
+body.color-blue .hoverColor.active {
+  color: #3742fa;
+}
+/* Green Styles */
+body.color-green .text-color {
+  color: #2ed573;
+}
+body.color-green .bg-color {
+  background-image: linear-gradient(to right, #2ed573, #7bed9f);
+}
+body.color-green .path-color path {
+  fill: #2ed573;
+}
+body.color-green .hoverColor:hover .path-color-hovered path,
+body.color-green .hoverColor.active .path-color-hovered path {
+  fill: #2ed573;
+}
+body.color-green .stroke-color path {
+  stroke: #2ed573;
+}
+body.color-green .active span,
+body.color-green .has-submenu.active a.open-inside-nav {
+  color: #2ed573;
+}
+body.color-green .hoverColor:hover,
+body.color-green .hoverColor.active {
+  color: #2ed573;
+}
+
+/* Orange Styles */
+body.color-orange .text-color {
+  color: #ff6348;
+}
+body.color-orange .bg-color {
+  background-image: linear-gradient(to right, #ff6348, #ff7f50);
+}
+body.color-orange .path-color path {
+  fill: #ff7f50;
+}
+body.color-orange .hoverColor:hover .path-color-hovered path,
+body.color-orange .hoverColor.active .path-color-hovered path {
+  fill: #ff7f50;
+}
+body.color-orange .stroke-color path {
+  stroke: #ff7f50;
+}
+body.color-orange .active span,
+body.color-orange .has-submenu.active a.open-inside-nav {
+  color: #ff7f50;
+}
+body.color-orange .hoverColor:hover,
+body.color-orange .hoverColor.active {
+  color: #ff7f50;
+}
+/* Yellow Styles */
+body.color-yellow .text-color {
+  color: #ffa502;
+}
+body.color-yellow .bg-color {
+  background-image: linear-gradient(to right, #ffa502, #eccc68);
+}
+body.color-yellow .path-color path {
+  fill: #ffa502;
+}
+body.color-yellow .hoverColor:hover .path-color-hovered path,
+body.color-yellow .hoverColor.active .path-color-hovered path {
+  fill: #ffa502;
+}
+body.color-yellow .stroke-color path {
+  stroke: #ffa502;
+}
+body.color-yellow .active span,
+body.color-yellow .has-submenu.active a.open-inside-nav {
+  color: #ffa502;
+}
+body.color-yellow .hoverColor:hover,
+body.color-yellow .hoverColor.active {
+  color: #ffa502;
+}
+
+/* Gray Styles */
+body.color-gray .text-color {
+  color: #2f3542;
+}
+body.color-gray .bg-color {
+  background-image: linear-gradient(to right, #2f3542, #57606f);
+}
+body.color-gray .path-color path {
+  fill: #2f3542;
+}
+body.color-gray .hoverColor:hover .path-color-hovered path,
+body.color-gray .hoverColor.active .path-color-hovered path {
+  fill: #2f3542;
+}
+body.color-gray .stroke-color path {
+  stroke: #2f3542;
+}
+body.color-gray .active span,
+body.color-gray .has-submenu.active a.open-inside-nav {
+  color: #2f3542;
+}
+body.color-gray .hoverColor:hover,
+body.color-gray .hoverColor.active {
+  color: #2f3542;
+}
+/* Sky-Blue Styles */
+body.color-skyBlue .text-color {
+  color: #1e90ff;
+}
+body.color-skyBlue .bg-color {
+  background-image: linear-gradient(to right, #1e90ff, #70a1ff);
+}
+body.color-skyBlue .path-color path {
+  fill: #1e90ff;
+}
+body.color-skyBlue .hoverColor:hover .path-color-hovered path,
+body.color-skyBlue .hoverColor.active .path-color-hovered path {
+  fill: #1e90ff;
+}
+body.color-skyBlue .stroke-color path {
+  stroke: #1e90ff;
+}
+body.color-skyBlue .active span,
+body.color-skyBlue .has-submenu.active a.open-inside-nav {
+  color: #1e90ff;
+}
+body.color-skyBlue .hoverColor:hover,
+body.color-skyBlue .hoverColor.active {
+  color: #1e90ff;
+}
+
+.hoverColor {
+  transition: 0.6s;
+  backface-visibility: hidden;
+}
+.btn {
+  transition: 0.6s;
+}
+.btn:hover {
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.24);
+}
+
+@media (max-width: 1365px) {
+  .font-20 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .text {
+    font-size: 14px;
+  }
+}
