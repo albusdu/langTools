@@ -9,9 +9,7 @@ $('.language-box').hover(function () {
 // Burger Open/Close
 $('#burger').click(function () {
   $('.header').toggleClass('header-active')
-})
-$('.header-overlay').click(function () {
-  $('.header').removeClass('header-active')
+  $('main.container').toggleClass('active-mobile')
 })
 
 $('.open-inside-nav').click(function () {
@@ -124,4 +122,29 @@ $(document).on('click', '.card-cont .box', function () {
     .removeClass('change-color-border')
   $('.check-but').removeClass('check-bg')
   $(this).find('.check-but').addClass('check-bg')
+})
+
+// Profile Log
+$(document).on('click', '.profile-log', function () {
+  $(this).toggleClass('logged')
+  if ($('.profile-log').hasClass('logged')) {
+    $(this).children('a').children('span').text('Log out')
+    $('.profile-email').show()
+  } else {
+    $(this).children('a').children('span').text('Log in')
+    $('.profile-email').hide()
+  }
+})
+
+//Speech button
+$(document).on('click', '.speech-button', function () {
+  $(this).toggleClass('active')
+})
+
+let pY = $('.fixed').height() + 30
+$('.scrollable-content').css('padding-top', `${pY}px`)
+
+$(window).resize(function () {
+  let pY = $('.fixed').height() + 30
+  $('.scrollable-content').css('padding-top', `${pY}px`)
 })

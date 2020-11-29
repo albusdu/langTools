@@ -16,16 +16,16 @@
         ავტორიზებულია და ჩნდება მომხმარებლის email, span-ში Log In-ის მაგივრად უნდა ჩაიწეროს Log Out -->
     <header class="header container">
         <div class="header-visible flex-box al-center between">
-            <div class="header-right flex-box">
+            <div class="header-right flex-box between">
+                <a href="#" class="logo-container flex-box column">
+                    <h1 class="bold uppercase">Language Tools</h1>
+                    <p class="font-12 uppercase">By DATA ANALYSIS LABORATORY</p>
+                </a>
                 <div class="burger flex-box column justify-center" id="burger">
                     <span class="bg-color"></span>
                     <span class="bg-color"></span>
                     <span class="bg-color"></span>
                 </div>
-                <a href="#" class="logo-container flex-box column">
-                    <h1 class="bold uppercase">Language Tools</h1>
-                    <p class="font-12 uppercase">By DATA ANALYSIS LABORATORY</p>
-                </a>
             </div>
             <div class="header-left flex-box al-center">
                 <div class="color-control">
@@ -140,7 +140,7 @@
                 </div>
             </div>
         </div>
-        <div class="header-hidden container flex-box column">
+        <!-- <div class="header-hidden container flex-box column">
             <nav class="navigation">
                 <a href="#" class="active">
                     <span class="font-20 hoverColor">Tools My</span>
@@ -220,12 +220,12 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
     </header>
-    <div class="header-overlay">
-    </div>
+    <!-- <div class="header-overlay">
+    </div> -->
 
-    <div class="tabsContainer container">
+    <!-- <div class="tabsContainer container">
         <div class="tabsContainerInner">
             <div class="firstFloor">
                 <div class="tabsLangContainer">
@@ -395,9 +395,10 @@
                     Free Fonts</a>
             </div>
         </div>
-    </div>
+    </div> -->
     <main class='container'>
         <nav class='sidebar'>
+            <div class='sidebar__container'>
             <div class="tabsLangContainer">
                     <div class="tabsLangContainerTtl tabsBtn">
                         <span>Georgian</span>
@@ -457,7 +458,7 @@
                 </a>
                 <nav class='inside-nav'>
                     <li>
-                        <a href="" class="tabsBtn hoverColor">
+                        <a href="spell-checker.html" class="tabsBtn hoverColor">
                             <svg xmlns="http://www.w3.org/2000/svg" width="13.025" height="9.929" viewBox="0 0 13.025 9.929"
                             class="path-color-hovered">
                             <path id="Icon_material-check" data-name="Icon material-check"
@@ -468,7 +469,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" class="tabsBtn hoverColor active">
+                        <a href="speech-recognition.html" class="tabsBtn hoverColor active">
                             <svg xmlns="http://www.w3.org/2000/svg" width="10.313" height="15" viewBox="0 0 10.313 15"
                                 class="path-color-hovered">
                                 <path id="Icon_awesome-microphone" data-name="Icon awesome-microphone"
@@ -478,7 +479,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" class="tabsBtn hoverColor">
+                        <a href="ocr.html" class="tabsBtn hoverColor">
                             <svg xmlns="http://www.w3.org/2000/svg" width="15.25" height="16.823" viewBox="0 0 15.25 16.823"
                                 class="path-color-hovered">
                                 <path id="arrow"
@@ -489,7 +490,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" class="tabsBtn hoverColor">
+                        <a href="text-synthesize.html" class="tabsBtn hoverColor">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16.41" height="14.173" viewBox="0 0 16.41 14.173"
                                 class="path-color-hovered">
                                 <g id="Icon_material-record-voice-over" data-name="Icon material-record-voice-over"
@@ -506,7 +507,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" class="tabsBtn hoverColor">
+                        <a href="freeFonts.html" class="tabsBtn hoverColor">
                             <svg xmlns="http://www.w3.org/2000/svg" width="14.373" height="14.373" viewBox="0 0 14.373 14.373"
                                 class="path-color-hovered">
                                 <path id="Icon_material-font-download" data-name="Icon material-font-download"
@@ -518,11 +519,14 @@
                     </li>
                 </nav>
             </li>
-            <li><a href="" class="hoverColor">About</a></li>
+            <li><a href="about.html" class="hoverColor">About</a></li>
+            <li><a href="contact.html" class="hoverColor">Contact</a></li>
             <li><a href="" class="hoverColor">Support</a></li>
             <li><a href="" class="hoverColor">Privacy policy</a></li>
+            </div>
         </nav>
         <section class="section__container">
+            <div class='fixed'>
             <div class="container-head flex-box al-center">
                 <p class="font-20 bold">Using Tool: </p>
                 <h2 class="text-color font-20 bold">Speech Recognition</h2>
@@ -530,7 +534,7 @@
             <div class="container-tools speech-recognition flex-box al-center">
                 <div>
                     <p>Click on the microphone icon and start speaking</p>
-                    <button class="speech-button active flex-box al-center justify-center btn bg-color">
+                    <button class="speech-button flex-box al-center justify-center btn bg-color">
                         <div class="svgBg"></div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="10.313" height="15" viewBox="0 0 10.313 15">
                             <path id="Icon_awesome-microphone" data-name="Icon awesome-microphone"
@@ -583,6 +587,8 @@
                 <p>Permission to use microphone is blocked. To change, go to chrome://settings/contentExceptions#media-stream</p>
             </div>
             </div>
+            </div>
+            <div class='scrollable-content'>
             <div class="container-text-box text">
 
             </div>
@@ -591,6 +597,7 @@
                 <a href="##" class="regular">Tesseract</a>
                 under
                 <a href="##" class="regular">Appache License</a>
+            </div>
             </div>
         </section>
     </main>

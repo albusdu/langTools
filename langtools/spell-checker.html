@@ -16,16 +16,16 @@
         ავტორიზებულია და ჩნდება მომხმარებლის email, ასევე span-ში Log In-ის მაგივრად უნდა ჩაიწეროს Log Out -->
     <header class="header container">
         <div class="header-visible flex-box al-center between">
-            <div class="header-right flex-box">
-                <!-- <div class="burger flex-box column justify-center" id="burger">
-                    <span class="bg-color"></span>
-                    <span class="bg-color"></span>
-                    <span class="bg-color"></span>
-                </div> -->
+            <div class="header-right flex-box between">
                 <a href="#" class="logo-container flex-box column">
                     <h1 class="bold uppercase">Language Tools</h1>
                     <p class="font-12 uppercase">By DATA ANALYSIS LABORATORY</p>
                 </a>
+                <div class="burger flex-box column justify-center" id="burger">
+                    <span class="bg-color"></span>
+                    <span class="bg-color"></span>
+                    <span class="bg-color"></span>
+                </div>
             </div>
             <div class="header-left flex-box al-center">
                 <div class="color-control">
@@ -224,7 +224,7 @@
     </header>
     <!-- <div class="header-overlay">
     </div> -->
-    <div class="tabsContainer container">
+    <!-- <div class="tabsContainer container">
         <div class="tabsContainerInner">
             <div class="firstFloor">
                 <div class="tabsLangContainer">
@@ -288,7 +288,7 @@
                             transform="translate(-5.115 -8.385)" fill="#eb4d4b" />
                     </svg>
                     Spell Checker</a>
-                <a href="##" class="tabsBtn hoverColor">
+                <a href="speech-recognition.html" class="tabsBtn hoverColor">
                     <svg xmlns="http://www.w3.org/2000/svg" width="10.313" height="15" viewBox="0 0 10.313 15"
                         class="path-color-hovered">
                         <path id="Icon_awesome-microphone" data-name="Icon awesome-microphone"
@@ -296,7 +296,7 @@
                             opacity="0.54" />
                     </svg>
                     Speech Recognition</a>
-                <a href="##" class="tabsBtn hoverColor">
+                <a href="ocr.html" class="tabsBtn hoverColor">
                     <svg xmlns="http://www.w3.org/2000/svg" width="15.25" height="16.823" viewBox="0 0 15.25 16.823"
                         class="path-color-hovered">
                         <path id="arrow"
@@ -312,7 +312,7 @@
                 </div>
             </div>
             <div class="secFloor">
-                <a href="##" class="tabsBtn hoverColor">
+                <a href="text-synthesize.html" class="tabsBtn hoverColor">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16.41" height="14.173" viewBox="0 0 16.41 14.173"
                         class="path-color-hovered">
                         <g id="Icon_material-record-voice-over" data-name="Icon material-record-voice-over"
@@ -326,14 +326,13 @@
                         </g>
                     </svg>
                     Text Synthesizer</a>
-                <a href="##" class="tabsBtn hoverColor">
+                <a href="freeFonts.html" class="tabsBtn hoverColor">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14.373" height="14.373" viewBox="0 0 14.373 14.373"
                         class="path-color-hovered">
                         <path id="Icon_material-font-download" data-name="Icon material-font-download"
                             d="M8.7,11.265h2.975L10.187,7.3ZM15.936,3H4.437A1.442,1.442,0,0,0,3,4.437v11.5a1.442,1.442,0,0,0,1.437,1.437h11.5a1.442,1.442,0,0,0,1.437-1.437V4.437A1.442,1.442,0,0,0,15.936,3ZM13.025,14.858,12.206,12.7H8.153l-.8,2.156h-1.5L9.518,5.515h1.337l3.672,9.342h-1.5Z"
                             transform="translate(-3 -3)" fill="rgba(0,0,0,0.54)" />
                     </svg>
-
                     Free Fonts</a>
             </div>
         </div>
@@ -394,9 +393,10 @@
                     Free Fonts</a>
             </div>
         </div>
-    </div>
+    </div> -->
     <main class='container'>
         <nav class='sidebar'>
+            <div class='sidebar__container'>
             <div class="tabsLangContainer">
                     <div class="tabsLangContainerTtl tabsBtn">
                         <span>Georgian</span>
@@ -456,7 +456,7 @@
                 </a>
                 <nav class='inside-nav'>
                     <li>
-                        <a href="" class="tabsBtn hoverColor active">
+                        <a href="#" class="tabsBtn hoverColor active">
                             <svg xmlns="http://www.w3.org/2000/svg" width="13.025" height="9.929" viewBox="0 0 13.025 9.929"
                             class="path-color-hovered">
                             <path id="Icon_material-check" data-name="Icon material-check"
@@ -467,7 +467,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" class="tabsBtn hoverColor">
+                        <a href="speech-recognition.html" class="tabsBtn hoverColor">
                             <svg xmlns="http://www.w3.org/2000/svg" width="10.313" height="15" viewBox="0 0 10.313 15"
                                 class="path-color-hovered">
                                 <path id="Icon_awesome-microphone" data-name="Icon awesome-microphone"
@@ -477,7 +477,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" class="tabsBtn hoverColor">
+                        <a href="ocr.html" class="tabsBtn hoverColor">
                             <svg xmlns="http://www.w3.org/2000/svg" width="15.25" height="16.823" viewBox="0 0 15.25 16.823"
                                 class="path-color-hovered">
                                 <path id="arrow"
@@ -488,7 +488,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" class="tabsBtn hoverColor">
+                        <a href="text-synthesize.html" class="tabsBtn hoverColor">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16.41" height="14.173" viewBox="0 0 16.41 14.173"
                                 class="path-color-hovered">
                                 <g id="Icon_material-record-voice-over" data-name="Icon material-record-voice-over"
@@ -505,7 +505,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" class="tabsBtn hoverColor">
+                        <a href="freeFonts.html" class="tabsBtn hoverColor">
                             <svg xmlns="http://www.w3.org/2000/svg" width="14.373" height="14.373" viewBox="0 0 14.373 14.373"
                                 class="path-color-hovered">
                                 <path id="Icon_material-font-download" data-name="Icon material-font-download"
@@ -517,17 +517,18 @@
                     </li>
                 </nav>
             </li>
-            <li><a href="" class="hoverColor">About</a></li>
+            <li><a href="about.html" class="hoverColor">About</a></li>
+            <li><a href="contact.html" class="hoverColor">Contact</a></li>
             <li><a href="" class="hoverColor">Support</a></li>
             <li><a href="" class="hoverColor">Privacy policy</a></li>
+            </div>
         </nav>
         <section class="section__container">
+            <div class='fixed'>
             <div class="container-head flex-box al-center">
                 <p class="font-20 bold">Using Tool: </p>
                 <h2 class="text-color font-20 bold">Spell Checker</h2>
             </div>
-
-
             <div class="container-tools flex-box al-center wrap">
                 <div class="tools-left flex-box al-center">
                     <div class="flex-box al-center">
@@ -580,7 +581,8 @@
                 </div>
 
             </div>
-
+</div>
+<div class='scrollable-content'>
             <div class="flex-box spell-checker-container">
                 <div class="container-text-box text" contenteditable></div>
                 <div class="mistakes-box flex-box column">
@@ -619,14 +621,13 @@
                     </div>
                 </div>
             </div>
-
-
             </div>
             <div class="licenceTxt regular">
                 Using library
                 <a href="##" class="regular">Tesseract</a>
                 under
                 <a href="##" class="regular">Appache License</a>
+            </div>
             </div>
         </section>
     </main>
