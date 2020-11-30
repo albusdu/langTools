@@ -1080,12 +1080,12 @@ main.container {
   padding: 5px 0;
 }
 .sidebar li.has-submenu {
-  height: 29px;
+  max-height: 29px;
   overflow: hidden;
   transition: 0.6s;
 }
 .sidebar li.has-submenu.active {
-  height: 174px;
+  max-height: 300px;
 }
 .sidebar li a.open-inside-nav {
   cursor: pointer;
