@@ -1047,6 +1047,11 @@ header {
         .fl {
           display: flex;
           flex-wrap: wrap;
+          &.fl1 {
+            @media (max-width: 1023px) {
+              margin-bottom: 5px;
+            }
+          }
         }
       }
       .frst {

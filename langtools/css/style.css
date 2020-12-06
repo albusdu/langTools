@@ -215,6 +215,10 @@
   margin-left: 18px;
 }
 
+.searchCont .bg-btn svg {
+  margin-left: 0;
+}
+
 .main-flex {
   position: relative;
   display: -webkit-box;
@@ -4000,10 +4004,6 @@ footer {
   display: flex;
 }
 
-.taskPageSecHead {
-  background: #fff;
-}
-
 .taskPageSecHead .flrs .imgUplBtn.hoverColor {
   background: #fafafa;
 }
@@ -4331,7 +4331,7 @@ input[type='number'] {
 
 .leftInner.tbHead {
   overflow: hidden;
-  z-index: 10;
+  z-index: 8;
   border: none;
   position: -webkit-sticky;
   position: sticky;
@@ -4993,6 +4993,7 @@ button.disabled {
   }
   .taskPageSecHead .fl2 .sz {
     margin-left: 0px;
+    margin-top: 5px;
   }
   .tasksPageHeader .right {
     -webkit-box-align: start;
@@ -6845,6 +6846,12 @@ header .header-visible .container-tools .flrs .fl {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media (max-width: 1023px) {
+  header .header-visible .container-tools .flrs .fl.fl1 {
+    margin-bottom: 5px;
+  }
 }
 
 header .header-visible .container-tools .frst {
