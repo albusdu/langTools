@@ -16,6 +16,12 @@ $('.open-inside-nav').click(function () {
   $(this).parent().toggleClass('active')
 })
 
+if ($(window).width() < 768) {
+  $('.list .item').click(function () {
+    $('.header').removeClass('header-active')
+    $('main.container').removeClass('active-mobile')
+  })
+}
 // Change Elements Color
 
 $('body').addClass(localStorage.color)
@@ -140,11 +146,14 @@ $(document).on('click', '.profile-log', function () {
 $(document).on('click', '.speech-button', function () {
   $(this).toggleClass('active')
 })
-
-let pY = $('.fixed').height() + 30
-$('.scrollable-content').css('padding-top', `${pY}px`)
+setTimeout(() => {
+  let mainPaddingTop = `${$('.header').height() + 15}px`
+  $('main.container, nav.sidebar').css('padding-top', mainPaddingTop)
+}, 100)
 
 $(window).resize(function () {
-  let pY = $('.fixed').height() + 30
-  $('.scrollable-content').css('padding-top', `${pY}px`)
+  setTimeout(() => {
+    let mainPaddingTop = `${$('.header').height() + 15}px`
+    $('main.container, nav.sidebar').css('padding-top', mainPaddingTop)
+  }, 100)
 })

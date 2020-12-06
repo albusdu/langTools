@@ -4,117 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration</title>
-    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/ali.css" />
-    <link rel="stylesheet" href="css/mxc.css" />
   </head>
 
   <body class="color-red">
     <header class="header container">
       <div class="header-visible flex-box al-center between">
         <div class="header-right flex-box between">
-          <a href="#" class="logo-container flex-box column">
-            <h1 class="bold uppercase">Language Tools</h1>
-            <p class="font-12 uppercase">By DATA ANALYSIS LABORATORY</p>
-          </a>
           <div class="burger flex-box column justify-center" id="burger">
             <span class="bg-color"></span>
             <span class="bg-color"></span>
             <span class="bg-color"></span>
           </div>
+          <a href="#" class="logo-container flex-box column">
+            <img
+              src="img/owl-symbol.png"
+              alt="enagramm owl"
+              class="enagramm-logo"
+            />
+          </a>
         </div>
-        <div class="header-left flex-box al-center">
-          <div class="color-control">
-            <div class="flex-box color-status al-center">
-              <div class="color-example bg-color"></div>
-              <div class="color-name text-color">Color</div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="10"
-                height="5"
-                viewBox="0 0 10 5"
-                class="path-color"
-              >
-                <path
-                  id="path"
-                  d="M7,15l5-5,5,5Z"
-                  transform="translate(17 15) rotate(180)"
-                  fill="#eb4d4b"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </div>
-            <div class="space-box"></div>
-            <ul class="color-list">
-              <li class="red-btn flex-box al-center" data-color="color-red">
-                <div class="color-example"></div>
-                <div class="color-name">Red</div>
-              </li>
-              <li class="blue-btn flex-box al-center" data-color="color-blue">
-                <div class="color-example"></div>
-                <div class="color-name">Blue</div>
-              </li>
-              <li class="green-btn flex-box al-center" data-color="color-green">
-                <div class="color-example"></div>
-                <div class="color-name">Green</div>
-              </li>
-              <li
-                class="orange-btn flex-box al-center"
-                data-color="color-orange"
-              >
-                <div class="color-example"></div>
-                <div class="color-name">Orange</div>
-              </li>
-              <li
-                class="yellow-btn flex-box al-center"
-                data-color="color-yellow"
-              >
-                <div class="color-example"></div>
-                <div class="color-name">Yellow</div>
-              </li>
-              <li class="gray-btn flex-box al-center" data-color="color-gray">
-                <div class="color-example"></div>
-                <div class="color-name">Gray</div>
-              </li>
-              <li class="sky-btn flex-box al-center" data-color="color-skyBlue">
-                <div class="color-example"></div>
-                <div class="color-name">Sky Blue</div>
-              </li>
-            </ul>
-          </div>
-
-          <div class="language-box">
-            <div class="languages flex-box al-center column">
-              <div class="current-language flex-box al-center">
-                <span>Eng</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="10"
-                  height="5"
-                  viewBox="0 0 10 5"
-                  class="path-color"
-                >
-                  <path
-                    id="path"
-                    d="M7,15l5-5,5,5Z"
-                    transform="translate(17 15) rotate(180)"
-                    fill="#eb4d4b"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </div>
-              <div class="space-box"></div>
-              <div class="other-languages">
-                <a href="#">English</a>
-                <a href="#">Georgian</a>
-                <a href="#">Russian</a>
-              </div>
-            </div>
-          </div>
-
+        <div class="header-left flex-box">
           <div class="profile-email">
-            <a href="#" class="flex-box al-center">
+            <a href="userRoom.html" class="flex-box al-center">
               <span>gmerty@gmail.com</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -133,7 +45,6 @@
               </svg>
             </a>
           </div>
-
           <div class="profile-log">
             <a href="login.html" class="flex-box al-center">
               <span>Log In</span>
@@ -234,138 +145,104 @@
           </div>
         </div>
       </div>
-      <!-- <div class="header-hidden container flex-box column">
-        <nav class="navigation">
-          <a href="#" class="active">
-            <span class="font-20 hoverColor">Tools My</span>
-          </a>
-          <a href="#">
-            <span class="font-20 hoverColor">Corner</span>
-          </a>
-          <a href="#">
-            <span class="font-20 hoverColor">About</span>
-          </a>
-          <a href="#">
-            <span class="font-20 hoverColor">Contact</span>
-          </a>
-        </nav>
-        <div class="burger-mob-items flex-box al-center between">
-          <div class="profile-log">
-            <a href="#" class="flex-box al-center">
-              <span>Log Out</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="17"
-                height="17"
-                viewBox="0 0 17 17"
-                class="stroke-color"
-              >
-                <g
-                  id="Icon_feather-log-out"
-                  data-name="Icon feather-log-out"
-                  transform="translate(-3.5 -3.5)"
-                >
-                  <path
-                    id="Path_98"
-                    data-name="Path 98"
-                    d="M9.5,19.5H6.167A1.667,1.667,0,0,1,4.5,17.833V6.167A1.667,1.667,0,0,1,6.167,4.5H9.5"
-                    fill="none"
-                    stroke="#eb4d4b"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                  <path
-                    id="Path_99"
-                    data-name="Path 99"
-                    d="M24,18.833l4.167-4.167L24,10.5"
-                    transform="translate(-8.667 -2.667)"
-                    fill="none"
-                    stroke="#eb4d4b"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                  <path
-                    id="Path_100"
-                    data-name="Path 100"
-                    d="M23.5,18h-10"
-                    transform="translate(-4 -6)"
-                    fill="none"
-                    stroke="#eb4d4b"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </g>
-              </svg>
-            </a>
-          </div>
-          <div class="color-control">
-            <div class="flex-box color-status al-center">
-              <div class="color-example bg-color"></div>
-              <div class="color-name text-color">Color</div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="10"
-                height="5"
-                viewBox="0 0 10 5"
-                class="path-color"
-              >
-                <path
-                  id="path"
-                  d="M7,15l5-5,5,5Z"
-                  transform="translate(17 15) rotate(180)"
-                  fill="#eb4d4b"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </div>
-            <div class="space-box"></div>
-            <ul class="color-list">
-              <li class="red-btn flex-box al-center" data-color="color-red">
-                <div class="color-example"></div>
-                <div class="color-name">Red</div>
-              </li>
-              <li class="blue-btn flex-box al-center" data-color="color-blue">
-                <div class="color-example"></div>
-                <div class="color-name">Blue</div>
-              </li>
-              <li class="green-btn flex-box al-center" data-color="color-green">
-                <div class="color-example"></div>
-                <div class="color-name">Green</div>
-              </li>
-              <li
-                class="orange-btn flex-box al-center"
-                data-color="color-orange"
-              >
-                <div class="color-example"></div>
-                <div class="color-name">Orange</div>
-              </li>
-              <li
-                class="yellow-btn flex-box al-center"
-                data-color="color-yellow"
-              >
-                <div class="color-example"></div>
-                <div class="color-name">Yellow</div>
-              </li>
-              <li class="gray-btn flex-box al-center" data-color="color-gray">
-                <div class="color-example"></div>
-                <div class="color-name">Gray</div>
-              </li>
-              <li class="sky-btn flex-box al-center" data-color="color-skyBlue">
-                <div class="color-example"></div>
-                <div class="color-name">Sky Blue</div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div> -->
     </header>
-    <!-- <div class="header-overlay"></div> -->
     <main class="container">
       <nav class="sidebar">
         <div class="sidebar__container">
+          <div class="sidebar__container__topbar">
+            <div class="color-control">
+              <div class="flex-box color-status al-center">
+                <div class="color-example bg-color"></div>
+                <div class="color-name text-color">Color</div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10"
+                  height="5"
+                  viewBox="0 0 10 5"
+                  class="path-color"
+                >
+                  <path
+                    id="path"
+                    d="M7,15l5-5,5,5Z"
+                    transform="translate(17 15) rotate(180)"
+                    fill="#eb4d4b"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+
+              <ul class="color-list">
+                <li class="red-btn flex-box al-center" data-color="color-red">
+                  <div class="color-example"></div>
+                  <div class="color-name">Red</div>
+                </li>
+                <li class="blue-btn flex-box al-center" data-color="color-blue">
+                  <div class="color-example"></div>
+                  <div class="color-name">Blue</div>
+                </li>
+                <li
+                  class="green-btn flex-box al-center"
+                  data-color="color-green"
+                >
+                  <div class="color-example"></div>
+                  <div class="color-name">Green</div>
+                </li>
+                <li
+                  class="orange-btn flex-box al-center"
+                  data-color="color-orange"
+                >
+                  <div class="color-example"></div>
+                  <div class="color-name">Orange</div>
+                </li>
+                <li
+                  class="yellow-btn flex-box al-center"
+                  data-color="color-yellow"
+                >
+                  <div class="color-example"></div>
+                  <div class="color-name">Yellow</div>
+                </li>
+                <li class="gray-btn flex-box al-center" data-color="color-gray">
+                  <div class="color-example"></div>
+                  <div class="color-name">Gray</div>
+                </li>
+                <li
+                  class="sky-btn flex-box al-center"
+                  data-color="color-skyBlue"
+                >
+                  <div class="color-example"></div>
+                  <div class="color-name">Sky Blue</div>
+                </li>
+              </ul>
+            </div>
+            <div class="language-box">
+              <div class="languages flex-box al-center column">
+                <div class="current-language flex-box al-center">
+                  <span>Eng</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="5"
+                    viewBox="0 0 10 5"
+                    class="path-color"
+                  >
+                    <path
+                      id="path"
+                      d="M7,15l5-5,5,5Z"
+                      transform="translate(17 15) rotate(180)"
+                      fill="#eb4d4b"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+
+                <div class="other-languages">
+                  <a href="#">English</a>
+                  <a href="#">Georgian</a>
+                  <a href="#">Russian</a>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="tabsLangContainer">
             <div class="tabsLangContainerTtl tabsBtn">
               <span>Georgian</span>
@@ -564,7 +441,6 @@
       <section class="section__container">
         <div class="scrollable-content">
           <div class="main-flex registration">
-            <!-- ტაბებია, გვერდი არ რეფრეშდება -->
             <div class="user-room">
               <h1 class="text-color ttl">Registration</h1>
               <span>Create a new account</span>

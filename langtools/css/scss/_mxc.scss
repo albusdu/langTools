@@ -27,7 +27,6 @@
   display: flex;
   border-radius: 2px;
   position: relative;
-  margin-right: 10px;
   z-index: 3;
 }
 .tabsLangContainer.active {
@@ -214,23 +213,8 @@ footer {
 .ocrContainer h2 span {
   font-size: 20px;
 }
-.imgUploadTabsContainer {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
 .imgUploadTabsContainer .ttl {
-  margin-right: 16px;
-}
-.imgUplBtn {
-  height: 36px;
-  display: flex;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  align-items: center;
-  padding: 0px 16px;
-  margin-right: 16px;
-  transition: 0.4s ease-in-out;
-  border-radius: 2px;
+  margin-right: 10px;
 }
 .closeImgUpload {
   display: flex;
@@ -316,7 +300,6 @@ footer {
   height: 100%;
   min-height: 300px;
   background: #fff;
-  margin-top: 16px;
 }
 .ocrInnerBtn {
   width: 120px;
@@ -402,16 +385,11 @@ footer {
 }
 .checkbox-wrap.fontsSelect {
   display: flex;
-  padding-right: 16px;
-  margin-left: 16px;
-  margin-right: 16px;
-  border-right: 1px solid rgba(0, 0, 0, 0.12);
   height: 36px;
 }
 .fontsSearchContainer {
   display: flex;
   align-items: center;
-  margin-top: 16px;
 }
 .fontsSearchContainer input {
   display: flex;
@@ -430,6 +408,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  flex: 1 0 0;
 }
 .freeFontsContainer .freeFont {
   width: calc(50% - 1em);
@@ -580,11 +559,19 @@ footer {
   display: flex;
   align-items: center;
 }
+.imgUplBtn {
+  height: 36px;
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  align-items: center;
+  padding: 0px 16px;
+  margin-right: 16px;
+  transition: 0.4s ease-in-out;
+  border-radius: 2px;
+}
 .tasksPageHeader {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid #dcdcdc;
-  padding-top: 30px;
   padding-bottom: 30px;
   background: #ffffff;
 }
@@ -743,7 +730,7 @@ input[type='number'] {
   background: #fff;
   display: flex;
   justify-content: space-between;
-  padding-top: 65px;
+  padding-top: 30px;
 }
 .taskPageContent .leftInner {
   width: 100%;
@@ -896,7 +883,7 @@ input[type='number'] {
 }
 .taskPagePag .taskPagination {
   margin-left: auto;
-  margin-top: 65px;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 .adminCorpusContainer {
@@ -983,7 +970,7 @@ button.disabled {
 }
 .user-room-item.corpus .subTtl {
   margin-left: auto;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   display: flex;
   text-align: right;
   justify-content: flex-end;
@@ -1002,7 +989,6 @@ button.disabled {
 .container-tools.speech-recognition > div {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
 }
 .container-tools.speech-recognition > p {
   width: 100%;
@@ -1188,10 +1174,6 @@ button.disabled {
   .taskPageSecHead .imgUploadTabsContainer .flrs {
     margin-bottom: 16px;
   }
-  .taskPageSecHead .imgUploadTabsContainer {
-    flex-direction: column;
-    align-items: end;
-  }
   .taskPageContent .right {
     width: 32.8%;
   }
@@ -1318,9 +1300,6 @@ button.disabled {
 }
 /*mobile*/
 @media (max-width: 767px) {
-  .container-tools.speech-recognition .scnd {
-    margin-left: 0px;
-  }
   .container-tools.speech-recognition .speech-button {
     margin-left: 0px;
     margin-top: 0;
@@ -1328,7 +1307,6 @@ button.disabled {
   }
   .container-tools.speech-recognition > div {
     width: 100%;
-    justify-content: space-between;
   }
   .container-tools.speech-recognition > div > p {
     display: none;
@@ -1426,11 +1404,6 @@ button.disabled {
   .imgUploadTabsContainer .ttl {
     display: none;
   }
-  .imgUploadTabsContainer {
-    flex-direction: column;
-    align-items: self-start;
-    margin-top: 15px;
-  }
   .footerInner {
     position: relative;
     width: 100%;
@@ -1497,9 +1470,6 @@ button.disabled {
     width: 100%;
     justify-content: space-between;
   }
-  .imgUploadTabsContainer .frst:first-child {
-    margin-bottom: 15px;
-  }
   .licenceTxt,
   .licenceTxt span {
     font-size: 12px;
@@ -1530,4 +1500,7 @@ button.disabled {
   .container-tools.speech-recognition .ttl {
     margin-right: 6px;
   }
+}
+
+.tabsLangContainer {
 }
