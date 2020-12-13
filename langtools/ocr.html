@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="icon"
+      href="./img/owl-symbol.png"
+      type="image/png"
+      sizes="16x16"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -25,13 +31,13 @@
           </a>
         </div>
         <div class="container-tools imgUploadTabsContainer">
-          <div class="frst">
+          <div class="frst hover-tooltip">
             <!-- <div class="ttl">Upload Image</div> -->
             <div class="imgUplBtnContainer">
               <button class="imgUplBtn">Browse</button>
               <input type="file" class="uploadInput" id="uploadInput" />
             </div>
-            <div class="imgUploadTtlOuter">
+            <div class="imgUploadTtlOuter hover-tooltip">
               <div class="imgUploadTtlOuterHeight">
                 <div class="imgUplBtn imgUploadTtl">
                   <span></span>
@@ -54,8 +60,11 @@
                 </div>
               </div>
             </div>
+            <div class="tooltip__container bg-color">
+              <span>ახსნა</span>
+            </div>
           </div>
-          <div class="frst">
+          <div class="frst hover-tooltip">
             <button class="imgUplBtn uplMainBtn hoverColor">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -74,11 +83,17 @@
               </svg>
               Upload Image
             </button>
+            <div class="tooltip__container bg-color">
+              <span>ახსნა</span>
+            </div>
           </div>
-          <div class="frst">
+          <div class="frst hover-tooltip">
             <button class="recognizedBtn imgUplBtn bg-color">
               Recognized Text
             </button>
+            <div class="tooltip__container bg-color">
+              <span>ახსნა</span>
+            </div>
           </div>
         </div>
         <div class="header-left flex-box">

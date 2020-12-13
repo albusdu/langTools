@@ -108,7 +108,7 @@ $('.mobileSelectTtl').on('click', function () {
 
 // Multiple Select
 $(document).ready(function () {
-  // $('.js-example-basic-multiple').select2();
+  $('.js-example-basic-multiple').select2()
 })
 
 let items = document.querySelectorAll(

@@ -108,7 +108,7 @@
   padding: 0px 20px;
   padding-right: 5px;
   justify-content: space-between;
-  font-size: 17px;
+  font-size: 16px;
 }
 .tabsLangSelectInner a {
   margin-bottom: 15px;
@@ -642,14 +642,14 @@ footer {
 .taskPageSecHead .fl2 .sz {
   display: flex;
   align-items: center;
-  margin-left: 16px;
+  // margin-left: 16px;
 }
 .taskPageSecHead .fl2 .sz .tabsLangContainer:after {
   display: none;
 }
 .taskPageSecHead .fl1 {
   padding-right: 16px;
-  margin-right: 32px;
+  margin-right: 16px;
   position: relative;
 }
 .taskPageSecHead .fl1:after {
@@ -888,16 +888,12 @@ input[type='number'] {
 }
 .adminCorpusContainer {
   display: flex;
-  width: calc(100% - 260px);
-}
-.adminCorpusContainer .user-room-item {
-  width: calc(100% - 435px);
 }
 .corpusLeft {
   width: 435px;
-  padding-left: 30px;
   display: flex;
   flex-direction: column;
+  height: fit-content;
 }
 .corpusLeftInner {
   width: 100%;
@@ -921,7 +917,7 @@ input[type='number'] {
 }
 .corpusLeft > .ttl {
   margin-top: 13px;
-  margin-bottom: 40px;
+  margin-bottom: 17px;
 }
 .corpusLeftContent {
   overflow: auto;
@@ -1149,14 +1145,8 @@ button.disabled {
     padding: 0px 16px;
   }
 
-  .adminCorpusContainer .user-room-item {
-    width: calc(100% - 265px);
-  }
   .corpusLeft {
     width: 265px;
-  }
-  .adminCorpusContainer {
-    width: calc(100% - 180px);
   }
 }
 /*laptop 1366*/
@@ -1221,7 +1211,6 @@ button.disabled {
     border-right: 0px;
   }
   .adminCorpusContainer .user-room-item {
-    width: 100%;
     margin-top: 30px;
   }
   .corpusLeftContent {
@@ -1232,7 +1221,6 @@ button.disabled {
     width: 100%;
   }
   .adminCorpusContainer {
-    width: calc(100% - 205px);
     flex-direction: column;
   }
   .taskPageContent {

@@ -4,578 +4,852 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Room</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>Admin Room - Corpus</title>
+    <link
+      rel="icon"
+      href="./img/owl-symbol.png"
+      type="image/png"
+      sizes="16x16"
+    />
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/ali.css">
-    <link rel="stylesheet" href="css/mxc.css">
-    <link rel="stylesheet" href="css/user.css">
 </head>
 
 <!-- Header-ს როდესაც ედება logged-in კლასი, ნიშნავს, რომ მომხმარებელი
     ავტორიზებულია და ჩნდება მომხმარებლის email, span-ში Log In-ის მაგივრად უნდა ჩაიწეროს Log Out -->
 <body class="color-red">
-
-<header class="header container">
-    <div class="header-visible flex-box al-center between">
-        <div class="header-right flex-box">
-            <div class="burger flex-box column justify-center" id="burger">
-                <span class="bg-color"></span>
-                <span class="bg-color"></span>
-                <span class="bg-color"></span>
-            </div>
-            <a href="#" class="logo-container flex-box column">
-                <h1 class="bold uppercase">Language Tools</h1>
-                <p class="font-12 uppercase">By DATA ANALYSIS LABORATORY</p>
-            </a>
+    <header class="header container">
+      <div class="header-visible flex-box al-center between">
+        <div class="header-right flex-box between">
+          <div class="burger flex-box column justify-center" id="burger">
+            <span class="bg-color"></span>
+            <span class="bg-color"></span>
+            <span class="bg-color"></span>
+          </div>
+          <a href="#" class="logo-container flex-box column">
+            <img
+              src="img/owl-symbol.png"
+              alt="enagramm owl"
+              class="enagramm-logo"
+            />
+          </a>
         </div>
-        <div class="header-left flex-box al-center">
-            <div class="color-control">
-                <div class="flex-box color-status al-center">
-                    <div class="color-example bg-color"></div>
-                    <div class="color-name text-color">Color</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 10 5"
-                         class="path-color">
-                        <path id="path" d="M7,15l5-5,5,5Z" transform="translate(17 15) rotate(180)" fill="#eb4d4b"
-                              fill-rule="evenodd" />
-                    </svg>
-                </div>
-                <div class="space-box"></div>
-                <ul class="color-list">
-                    <li class="red-btn flex-box al-center" data-color="color-red">
-                        <div class="color-example"></div>
-                        <div class="color-name">Red</div>
-                    </li>
-                    <li class="blue-btn flex-box al-center" data-color="color-blue">
-                        <div class="color-example"></div>
-                        <div class="color-name">Blue</div>
-                    </li>
-                    <li class="green-btn flex-box al-center" data-color="color-green">
-                        <div class="color-example"></div>
-                        <div class="color-name">Green</div>
-                    </li>
-                    <li class="orange-btn flex-box al-center" data-color="color-orange">
-                        <div class="color-example"></div>
-                        <div class="color-name">Orange</div>
-                    </li>
-                    <li class="yellow-btn flex-box al-center" data-color="color-yellow">
-                        <div class="color-example"></div>
-                        <div class="color-name">Yellow</div>
-                    </li>
-                    <li class="gray-btn flex-box al-center" data-color="color-gray">
-                        <div class="color-example"></div>
-                        <div class="color-name">Gray</div>
-                    </li>
-                    <li class="sky-btn flex-box al-center" data-color="color-skyBlue">
-                        <div class="color-example"></div>
-                        <div class="color-name">Sky Blue</div>
-                    </li>
-                </ul>
-            </div>
 
-            <div class="language-box">
-                <div class="languages flex-box al-center column">
-                    <div class="current-language flex-box al-center">
-                        <span>Eng</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 10 5"
-                             class="path-color">
-                            <path id="path" d="M7,15l5-5,5,5Z" transform="translate(17 15) rotate(180)"
-                                  fill="#eb4d4b" fill-rule="evenodd" />
-                        </svg>
-                    </div>
-                    <div class="space-box"></div>
-                    <div class="other-languages">
-                        <a href="#">English</a>
-                        <a href="#">Georgian</a>
-                        <a href="#">Russian</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="profile-email">
-                <a href="#" class="flex-box al-center">
-                    <span>gmerty@gmail.com</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="7.4" height="12" viewBox="0 0 7.4 12"
-                         class="path-color">
-                        <path id="path" d="M8.6,7.4,10,6l6,6-6,6L8.6,16.6,13.2,12Z" transform="translate(-8.6 -6)"
-                              fill="#eb4d4b" fill-rule="evenodd" />
-                    </svg>
-                </a>
-            </div>
-
-            <div class="profile-log">
-                <a href="#" class="flex-box al-center">
-                    <span>Log In</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
-                         class="stroke-color log-out-icon">
-                        <g id="Icon_feather-log-out" data-name="Icon feather-log-out"
-                           transform="translate(-3.5 -3.5)">
-                            <path id="Path_98" data-name="Path 98"
-                                  d="M9.5,19.5H6.167A1.667,1.667,0,0,1,4.5,17.833V6.167A1.667,1.667,0,0,1,6.167,4.5H9.5"
-                                  fill="none" stroke="#eb4d4b" stroke-linecap="round" stroke-linejoin="round"
-                                  stroke-width="2" />
-                            <path id="Path_99" data-name="Path 99" d="M24,18.833l4.167-4.167L24,10.5"
-                                  transform="translate(-8.667 -2.667)" fill="none" stroke="#eb4d4b"
-                                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                            <path id="Path_100" data-name="Path 100" d="M23.5,18h-10" transform="translate(-4 -6)"
-                                  fill="none" stroke="#eb4d4b" stroke-linecap="round" stroke-linejoin="round"
-                                  stroke-width="2" />
-                        </g>
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
-                         class="stroke-color log-in-icon">
-                        <g id="Icon_feather-log-out" data-name="Icon feather-log-out"
-                           transform="translate(-8.5 -3.5)">
-                            <path id="Path_98" data-name="Path 98"
-                                  d="M4.5,19.5H7.833A1.667,1.667,0,0,0,9.5,17.833V6.167A1.667,1.667,0,0,0,7.833,4.5H4.5"
-                                  transform="translate(15)" fill="none" stroke="#eb4d4b" stroke-linecap="round"
-                                  stroke-linejoin="round" stroke-width="2" />
-                            <path id="Path_99" data-name="Path 99" d="M24,18.833l4.167-4.167L24,10.5"
-                                  transform="translate(-8.667 -2.667)" fill="none" stroke="#eb4d4b"
-                                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                            <path id="Path_100" data-name="Path 100" d="M23.5,18h-10" transform="translate(-4 -6)"
-                                  fill="none" stroke="#eb4d4b" stroke-linecap="round" stroke-linejoin="round"
-                                  stroke-width="2" />
-                        </g>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="header-hidden container flex-box column">
-        <nav class="navigation">
-            <a href="#" class="active">
-                <span class="font-20 hoverColor">Tools My</span>
+        <div class="header-left flex-box">
+          <div class="profile-email">
+            <a href="userRoom.html" class="flex-box al-center">
+              <span>gmerty@gmail.com</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="7.4"
+                height="12"
+                viewBox="0 0 7.4 12"
+                class="path-color"
+              >
+                <path
+                  id="path"
+                  d="M8.6,7.4,10,6l6,6-6,6L8.6,16.6,13.2,12Z"
+                  transform="translate(-8.6 -6)"
+                  fill="#eb4d4b"
+                  fill-rule="evenodd"
+                />
+              </svg>
             </a>
-            <a href="#">
-                <span class="font-20 hoverColor">Corner</span>
-            </a>
-            <a href="#">
-                <span class="font-20 hoverColor">About</span>
-            </a>
-            <a href="#">
-                <span class="font-20 hoverColor">Contact</span>
-            </a>
-        </nav>
-        <div class="burger-mob-items flex-box al-center between">
-            <div class="profile-log">
-                <a href="#" class="flex-box al-center">
-                    <span>Log Out</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
-                         class="stroke-color">
-                        <g id="Icon_feather-log-out" data-name="Icon feather-log-out"
-                           transform="translate(-3.5 -3.5)">
-                            <path id="Path_98" data-name="Path 98"
-                                  d="M9.5,19.5H6.167A1.667,1.667,0,0,1,4.5,17.833V6.167A1.667,1.667,0,0,1,6.167,4.5H9.5"
-                                  fill="none" stroke="#eb4d4b" stroke-linecap="round" stroke-linejoin="round"
-                                  stroke-width="2" />
-                            <path id="Path_99" data-name="Path 99" d="M24,18.833l4.167-4.167L24,10.5"
-                                  transform="translate(-8.667 -2.667)" fill="none" stroke="#eb4d4b"
-                                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                            <path id="Path_100" data-name="Path 100" d="M23.5,18h-10" transform="translate(-4 -6)"
-                                  fill="none" stroke="#eb4d4b" stroke-linecap="round" stroke-linejoin="round"
-                                  stroke-width="2" />
-                        </g>
-                    </svg>
-                </a>
-            </div>
-            <div class="color-control">
-                <div class="flex-box color-status al-center">
-                    <div class="color-example bg-color"></div>
-                    <div class="color-name text-color">Color</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 10 5"
-                         class="path-color">
-                        <path id="path" d="M7,15l5-5,5,5Z" transform="translate(17 15) rotate(180)" fill="#eb4d4b"
-                              fill-rule="evenodd" />
-                    </svg>
-                </div>
-                <div class="space-box"></div>
-                <ul class="color-list">
-                    <li class="red-btn flex-box al-center" data-color="color-red">
-                        <div class="color-example"></div>
-                        <div class="color-name">Red</div>
-                    </li>
-                    <li class="blue-btn flex-box al-center" data-color="color-blue">
-                        <div class="color-example"></div>
-                        <div class="color-name">Blue</div>
-                    </li>
-                    <li class="green-btn flex-box al-center" data-color="color-green">
-                        <div class="color-example"></div>
-                        <div class="color-name">Green</div>
-                    </li>
-                    <li class="orange-btn flex-box al-center" data-color="color-orange">
-                        <div class="color-example"></div>
-                        <div class="color-name">Orange</div>
-                    </li>
-                    <li class="yellow-btn flex-box al-center" data-color="color-yellow">
-                        <div class="color-example"></div>
-                        <div class="color-name">Yellow</div>
-                    </li>
-                    <li class="gray-btn flex-box al-center" data-color="color-gray">
-                        <div class="color-example"></div>
-                        <div class="color-name">Gray</div>
-                    </li>
-                    <li class="sky-btn flex-box al-center" data-color="color-skyBlue">
-                        <div class="color-example"></div>
-                        <div class="color-name">Sky Blue</div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</header>
-<div class="header-overlay">
-</div>
-<div class="container">
-    <div class="main-flex">
-        <!-- ტაბებია, გვერდი არ რეფრეშდება -->
-        <div class="user-room ">
-            <h2 class="ttl">
-                <span class="bold">User Room</span>
-                <span class="bold text-color">Profile</span>
-            </h2>
-
-            <svg class="path-color" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <g id="ic_chevron_right" transform="translate(24) rotate(90)">
-                    <rect id="rectangle" width="24" height="24" fill="none" />
-                    <path id="path" d="M8.6,7.4,10,6l6,6-6,6L8.6,16.6,13.2,12Z" fill="#eb4d4b"
-                          fill-rule="evenodd" />
+          </div>
+          <div class="profile-log">
+            <a href="#" class="flex-box al-center">
+              <span>Log In</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="17"
+                height="17"
+                viewBox="0 0 17 17"
+                class="stroke-color log-out-icon"
+              >
+                <g
+                  id="Icon_feather-log-out"
+                  data-name="Icon feather-log-out"
+                  transform="translate(-3.5 -3.5)"
+                >
+                  <path
+                    id="Path_98"
+                    data-name="Path 98"
+                    d="M9.5,19.5H6.167A1.667,1.667,0,0,1,4.5,17.833V6.167A1.667,1.667,0,0,1,6.167,4.5H9.5"
+                    fill="none"
+                    stroke="#eb4d4b"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    id="Path_99"
+                    data-name="Path 99"
+                    d="M24,18.833l4.167-4.167L24,10.5"
+                    transform="translate(-8.667 -2.667)"
+                    fill="none"
+                    stroke="#eb4d4b"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    id="Path_100"
+                    data-name="Path 100"
+                    d="M23.5,18h-10"
+                    transform="translate(-4 -6)"
+                    fill="none"
+                    stroke="#eb4d4b"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
                 </g>
-            </svg>
-
-            <div class="top">
-
-                <svg class="path-color" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                     viewBox="0 0 24 24">
-                    <g id="Group_425" data-name="Group 425" transform="translate(-425 -285)">
-                        <rect id="rectangle" width="24" height="24" transform="translate(425 285)"
-                              fill="rgba(255,0,0,0)" />
-                        <path id="Icon_material-person" data-name="Icon material-person"
-                              d="M12.966,12.966A3.483,3.483,0,1,0,9.483,9.483,3.482,3.482,0,0,0,12.966,12.966Zm0,1.741C10.641,14.707,6,15.874,6,18.19v1.741H19.932V18.19C19.932,15.874,15.291,14.707,12.966,14.707Z"
-                              transform="translate(424.034 284.034)" fill="rgba(0,0,0,0.54)" />
-                    </g>
-                </svg>
-
-                <span class="text-color">
-                        Profile
-                    </span>
-            </div>
-            <div class="list">
-                <a href="#" class="item hoverColor active" data-index="0">
-                    <svg class="path-color-hovered" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                         viewBox="0 0 24 24">
-                        <g id="Group_425" data-name="Group 425" transform="translate(-425 -285)">
-                            <rect id="rectangle" width="24" height="24" transform="translate(425 285)"
-                                  fill="rgba(255,0,0,0)" />
-                            <path id="Icon_material-person" data-name="Icon material-person"
-                                  d="M12.966,12.966A3.483,3.483,0,1,0,9.483,9.483,3.482,3.482,0,0,0,12.966,12.966Zm0,1.741C10.641,14.707,6,15.874,6,18.19v1.741H19.932V18.19C19.932,15.874,15.291,14.707,12.966,14.707Z"
-                                  transform="translate(424.034 284.034)" fill="rgba(0,0,0,0.54)" />
-                        </g>
-                    </svg>
-
-
-
-                    Profile
-
-                </a>
-
-                <a href="#" class="item hoverColor" data-index="5">
-
-                    <svg class="path-color-hovered"  transform="translate(-425 -285) xmlns="http://www.w3.org/2000/svg" width="15.858" height="14.096" viewBox="0 0 15.858 14.096">
-                    <path id="Icon_metro-users" data-name="Icon metro-users" d="M13.144,15.751v-.727a3.935,3.935,0,0,0,1.762-3.274c0-2.19,0-3.965-2.643-3.965S9.62,9.561,9.62,11.75a3.935,3.935,0,0,0,1.762,3.274v.727C8.393,16,6.1,17.464,6.1,19.239H18.43c0-1.775-2.3-3.244-5.286-3.488Zm-6.068.34a8.37,8.37,0,0,1,2.75-1.107,4.97,4.97,0,0,1-.557-.812,5.045,5.045,0,0,1-.64-2.421A7.822,7.822,0,0,1,9.05,8.533a2.868,2.868,0,0,1,2.192-1.645c-.233-1.053-.853-1.745-2.5-1.745C6.1,5.143,6.1,6.918,6.1,9.107a3.935,3.935,0,0,0,1.762,3.274v.727c-2.989.244-5.286,1.713-5.286,3.488H6.412a5.643,5.643,0,0,1,.663-.5Z" transform="translate(-2.571 -5.143)" fill="#eb4d4b"/>
-                    </svg>
-
-                    Users
-                </a>
-
-                <a href="#" class="item hoverColor" data-index="1">
-                    <svg class="path-color-hovered" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                         viewBox="0 0 24 24">
-                        <g id="Group_426" data-name="Group 426" transform="translate(-425 -285)">
-                            <rect id="rectangle" width="24" height="24" transform="translate(425 285)"
-                                  fill="rgba(255,0,0,0)" />
-                            <path id="Icon_awesome-clipboard-list" data-name="Icon awesome-clipboard-list"
-                                  d="M9.2,1.753H7.01a1.753,1.753,0,1,0-3.505,0H1.314A1.315,1.315,0,0,0,0,3.067v9.639a1.315,1.315,0,0,0,1.314,1.314H9.2a1.315,1.315,0,0,0,1.314-1.314V3.067A1.315,1.315,0,0,0,9.2,1.753ZM2.629,11.611a.657.657,0,1,1,.657-.657A.656.656,0,0,1,2.629,11.611Zm0-2.629a.657.657,0,1,1,.657-.657A.656.656,0,0,1,2.629,8.982Zm0-2.629A.657.657,0,1,1,3.286,5.7.656.656,0,0,1,2.629,6.353ZM5.258,1.1a.657.657,0,1,1-.657.657A.656.656,0,0,1,5.258,1.1ZM8.763,11.173a.22.22,0,0,1-.219.219H4.6a.22.22,0,0,1-.219-.219v-.438a.22.22,0,0,1,.219-.219H8.544a.22.22,0,0,1,.219.219Zm0-2.629a.22.22,0,0,1-.219.219H4.6a.22.22,0,0,1-.219-.219V8.106A.22.22,0,0,1,4.6,7.887H8.544a.22.22,0,0,1,.219.219Zm0-2.629a.22.22,0,0,1-.219.219H4.6a.22.22,0,0,1-.219-.219V5.477A.22.22,0,0,1,4.6,5.258H8.544a.22.22,0,0,1,.219.219Z"
-                                  transform="translate(431.721 290.295)" fill="rgba(0,0,0,0.54)" />
-                        </g>
-                    </svg>
-
-                    Tasks
-                </a>
-
-                <a href="#" class="item hoverColor" data-index="2">
-                    <svg class="path-color-hovered" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                         viewBox="0 0 24 24">
-                        <g id="Group_427" data-name="Group 427" transform="translate(-425 -285)">
-                            <rect id="rectangle" width="24" height="24" transform="translate(425 285)"
-                                  fill="rgba(255,0,0,0)" />
-                            <path id="Icon_material-file-download" data-name="Icon material-file-download"
-                                  d="M19.044,9.447h-3.3V4.5H10.8V9.447H7.5l5.772,5.772ZM7.5,16.868v1.649H19.044V16.868Z"
-                                  transform="translate(423.228 285.241)" fill="rgba(0,0,0,0.54)" />
-                        </g>
-                    </svg>
-
-                    Download
-                </a>
-
-                <a href="#" class="item hoverColor" data-index="3">
-                    <svg class="path-color-hovered" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                         viewBox="0 0 24 24">
-                        <g id="Group_429" data-name="Group 429" transform="translate(-425 -285)">
-                            <rect id="rectangle" width="24" height="24" transform="translate(425 285)"
-                                  fill="rgba(255,0,0,0)" />
-                            <path id="Icon_awesome-book-open" data-name="Icon awesome-book-open"
-                                  d="M13.154,2.251A13.487,13.487,0,0,0,7.551,3.6a.373.373,0,0,0-.176.319v8.827a.384.384,0,0,0,.565.327,14.8,14.8,0,0,1,5.305-1.138.757.757,0,0,0,.728-.744V3a.76.76,0,0,0-.819-.745ZM6.422,3.6a13.489,13.489,0,0,0-5.6-1.349A.761.761,0,0,0,0,3v8.2a.756.756,0,0,0,.728.744,14.794,14.794,0,0,1,5.307,1.139.383.383,0,0,0,.563-.327V3.915A.365.365,0,0,0,6.422,3.6Z"
-                                  transform="translate(430.263 289.066)" fill="rgba(0,0,0,0.54)" />
-                        </g>
-                    </svg>
-
-                    Dictionary
-                </a>
-
-                <a href="#" class="item hoverColor" data-index="4">
-                    <svg class="path-color-hovered" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                         viewBox="0 0 24 24">
-                        <g id="Group_430" data-name="Group 430" transform="translate(-425 -285)">
-                            <rect id="rectangle" width="24" height="24" transform="translate(425 285)"
-                                  fill="rgba(255,0,0,0)" />
-                            <path id="Icon_ionic-ios-paper" data-name="Icon ionic-ios-paper"
-                                  d="M5.933,4.452V15.29a.473.473,0,0,1-.471.471h0a.473.473,0,0,1-.471-.471V5.529H4.452A1.076,1.076,0,0,0,3.375,6.606V16.3a1.076,1.076,0,0,0,1.077,1.077H16.337a1.041,1.041,0,0,0,1.04-1.04V4.452A1.076,1.076,0,0,0,16.3,3.375l-9.357.067A.965.965,0,0,0,5.933,4.452ZM8.155,5.529h2.827A.473.473,0,0,1,11.453,6h0a.473.473,0,0,1-.471.471H8.155A.473.473,0,0,1,7.683,6h0A.473.473,0,0,1,8.155,5.529Zm0,5.385h4.981a.473.473,0,0,1,.471.471h0a.473.473,0,0,1-.471.471H8.155a.473.473,0,0,1-.471-.471h0A.473.473,0,0,1,8.155,10.915Zm6.6,3.635h-6.6a.473.473,0,0,1-.471-.471h0a.473.473,0,0,1,.471-.471h6.6a.473.473,0,0,1,.471.471h0A.473.473,0,0,1,14.752,14.55Zm0-5.385h-6.6a.473.473,0,0,1-.471-.471h0a.473.473,0,0,1,.471-.471h6.6a.473.473,0,0,1,.471.471h0A.473.473,0,0,1,14.752,9.164Z"
-                                  transform="translate(426.249 286.249)" fill="rgba(0,0,0,0.54)" />
-                        </g>
-                    </svg>
-
-                    Corpus
-                </a>
-            </div>
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="17"
+                height="17"
+                viewBox="0 0 17 17"
+                class="stroke-color log-in-icon"
+              >
+                <g
+                  id="Icon_feather-log-out"
+                  data-name="Icon feather-log-out"
+                  transform="translate(-8.5 -3.5)"
+                >
+                  <path
+                    id="Path_98"
+                    data-name="Path 98"
+                    d="M4.5,19.5H7.833A1.667,1.667,0,0,0,9.5,17.833V6.167A1.667,1.667,0,0,0,7.833,4.5H4.5"
+                    transform="translate(15)"
+                    fill="none"
+                    stroke="#eb4d4b"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    id="Path_99"
+                    data-name="Path 99"
+                    d="M24,18.833l4.167-4.167L24,10.5"
+                    transform="translate(-8.667 -2.667)"
+                    fill="none"
+                    stroke="#eb4d4b"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    id="Path_100"
+                    data-name="Path 100"
+                    d="M23.5,18h-10"
+                    transform="translate(-4 -6)"
+                    fill="none"
+                    stroke="#eb4d4b"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </g>
+              </svg>
+            </a>
+          </div>
         </div>
-        <div class="adminCorpusContainer">
-            <div class="corpusLeft">
-                <div class="ttl">Corpus</div>
-                <div class="corpusLeftInner">
-                    <div class="corpusLeftHead">
-                        <div class="txt">Title:</div>
-                        <div class="txt">1-71 Articles From 71</div>
-                    </div>
-                    <div class="corpusLeftContentOuter">
-                        <div class="corpusLeftContent">
-                        <div data-index="0">Long Established</div>
-                        <div data-index="1">Many Desktop</div>
-                        <div data-index="2">Publishing Packages</div>
-                        <div data-index="3">Page Editors</div>
-                        <div data-index="4">First True</div>
-                        <div data-index="0">Long Established</div>
-                        <div data-index="1">Many Desktop</div>
-                        <div data-index="2">Publishing Packages</div>
-                        <div data-index="3">Page Editors</div>
-                        <div data-index="4">First True</div>
-                        <div data-index="0">Long Established</div>
-                        <div data-index="1">Many Desktop</div>
-                        <div data-index="2">Publishing Packages</div>
-                        <div data-index="3">Page Editors</div>
-                        <div data-index="4">First True</div>
-                        <div data-index="0">Long Established</div>
-                        <div data-index="1">Many Desktop</div>
-                        <div data-index="2">Publishing Packages</div>
-                        <div data-index="3">Page Editors</div>
-                        <div data-index="4">First True</div>
-                        <div data-index="0">Long Established</div>
-                        <div data-index="1">Many Desktop</div>
-                        <div data-index="2">Publishing Packages</div>
-                        <div data-index="3">Page Editors</div>
-                        <div data-index="4">First True</div>
-                        <div data-index="0">Long Established</div>
-                        <div data-index="1">Many Desktop</div>
-                        <div data-index="2">Publishing Packages</div>
-                        <div data-index="3">Page Editors</div>
-                        <div data-index="4">First True</div>
-                        <div data-index="0">Long Established</div>
-                        <div data-index="1">Many Desktop</div>
-                        <div data-index="2">Publishing Packages</div>
-                        <div data-index="3">Page Editors</div>
-                        <div data-index="4">First True</div>
-                        <div data-index="0">Long Established</div>
-                        <div data-index="1">Many Desktop</div>
-                        <div data-index="2">Publishing Packages</div>
-                        <div data-index="3">Page Editors</div>
-                        <div data-index="4">First True</div>
-                        <div data-index="0">Long Established</div>
-                        <div data-index="1">Many Desktop</div>
-                        <div data-index="2">Publishing Packages</div>
-                        <div data-index="3">Page Editors</div>
-                        <div data-index="4">First True</div>
-                        <div data-index="0">Long Established</div>
-                        <div data-index="1">Many Desktop</div>
-                        <div data-index="2">Publishing Packages</div>
-                        <div data-index="3">Page Editors</div>
-                        <div data-index="4">First True</div>
-                    </div>
+      </div>
+    </header>
+    <main class="container">
+      <nav class="sidebar">
+        <div class="sidebar__container">
+          <div class="sidebar__container__topbar">
+            <div class="color-control">
+              <div class="flex-box color-status al-center">
+                <div class="color-example bg-color"></div>
+                <div class="color-name text-color">Color</div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10"
+                  height="5"
+                  viewBox="0 0 10 5"
+                  class="path-color"
+                >
+                  <path
+                    id="path"
+                    d="M7,15l5-5,5,5Z"
+                    transform="translate(17 15) rotate(180)"
+                    fill="#eb4d4b"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+
+              <ul class="color-list">
+                <li class="red-btn flex-box al-center" data-color="color-red">
+                  <div class="color-example"></div>
+                  <div class="color-name">Red</div>
+                </li>
+                <li class="blue-btn flex-box al-center" data-color="color-blue">
+                  <div class="color-example"></div>
+                  <div class="color-name">Blue</div>
+                </li>
+                <li
+                  class="green-btn flex-box al-center"
+                  data-color="color-green"
+                >
+                  <div class="color-example"></div>
+                  <div class="color-name">Green</div>
+                </li>
+                <li
+                  class="orange-btn flex-box al-center"
+                  data-color="color-orange"
+                >
+                  <div class="color-example"></div>
+                  <div class="color-name">Orange</div>
+                </li>
+                <li
+                  class="yellow-btn flex-box al-center"
+                  data-color="color-yellow"
+                >
+                  <div class="color-example"></div>
+                  <div class="color-name">Yellow</div>
+                </li>
+                <li class="gray-btn flex-box al-center" data-color="color-gray">
+                  <div class="color-example"></div>
+                  <div class="color-name">Gray</div>
+                </li>
+                <li
+                  class="sky-btn flex-box al-center"
+                  data-color="color-skyBlue"
+                >
+                  <div class="color-example"></div>
+                  <div class="color-name">Sky Blue</div>
+                </li>
+              </ul>
+            </div>
+            <div class="language-box">
+              <div class="languages flex-box al-center column">
+                <div class="current-language flex-box al-center">
+                  <span>Eng</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="5"
+                    viewBox="0 0 10 5"
+                    class="path-color"
+                  >
+                    <path
+                      id="path"
+                      d="M7,15l5-5,5,5Z"
+                      transform="translate(17 15) rotate(180)"
+                      fill="#eb4d4b"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+
+                <div class="other-languages">
+                  <a href="#">English</a>
+                  <a href="#">Georgian</a>
+                  <a href="#">Russian</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tabsLangContainer">
+            <div class="tabsLangContainerTtl tabsBtn">
+              <span>Georgian</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="10"
+                height="5"
+                viewBox="0 0 10 5"
+                class="path-color"
+              >
+                <path
+                  id="path"
+                  d="M7,15l5-5,5,5Z"
+                  transform="translate(17 15) rotate(180)"
+                  fill="#eb4d4b"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <div class="tabsLangSelectContainer">
+              <div class="ttlContainer">
+                Language
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                >
+                  <defs>
+                    <clipPath id="clip-path">
+                      <rect width="14" height="14" fill="none" />
+                    </clipPath>
+                  </defs>
+                  <g
+                    id="Repeat_Grid_1"
+                    data-name="Repeat Grid 1"
+                    clip-path="url(#clip-path)"
+                  >
+                    <g transform="translate(-5 -5)">
+                      <path
+                        id="path"
+                        d="M19,6.4,17.6,5,12,10.6,6.4,5,5,6.4,10.6,12,5,17.6,6.4,19,12,13.4,17.6,19,19,17.6,13.4,12Z"
+                        fill-rule="evenodd"
+                        opacity="0.54"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <div class="tabsLangSelectInner">
+                <a href="##" class="hoverColor">Abkhazian</a>
+                <a href="##" class="hoverColor">Mabkhazian</a>
+                <a href="##" class="hoverColor">Shmabkhazian</a>
+                <a href="##" class="hoverColor">Ragacbkhazian</a>
+                <a href="##" class="hoverColor">Abkhazian</a>
+                <a href="##" class="hoverColor">Mabkhazian</a>
+                <a href="##" class="hoverColor">Shmabkhazian</a>
+                <a href="##" class="hoverColor">Ragacbkhazian</a>
+                <a href="##" class="hoverColor">Abkhazian</a>
+                <a href="##" class="hoverColor">Mabkhazian</a>
+                <a href="##" class="hoverColor">Shmabkhazian</a>
+                <a href="##" class="hoverColor">Ragacbkhazian</a>
+                <a href="##" class="hoverColor">Abkhazian</a>
+                <a href="##" class="hoverColor">Mabkhazian</a>
+                <a href="##" class="hoverColor">Shmabkhazian</a>
+                <a href="##" class="hoverColor">Ragacbkhazian</a>
+                <a href="##" class="hoverColor">Abkhazian</a>
+                <a href="##" class="hoverColor">Mabkhazian</a>
+                <a href="##" class="hoverColor">Shmabkhazian</a>
+                <a href="##" class="hoverColor">Ragacbkhazian</a>
+              </div>
+            </div>
+          </div>
+          <li class="has-submenu active">
+            <a class="open-inside-nav hoverColor">Control Panel</a>
+            <nav class="inside-nav">
+              <li>
+                <a href="profile.html" class="tabsBtn hoverColor">
+                  <svg
+                    class="path-color-hovered"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      id="Group_425"
+                      data-name="Group 425"
+                      transform="translate(-425 -285)"
+                    >
+                      <rect
+                        id="rectangle"
+                        width="24"
+                        height="24"
+                        transform="translate(425 285)"
+                        fill="rgba(255,0,0,0)"
+                      />
+                      <path
+                        id="Icon_material-person"
+                        data-name="Icon material-person"
+                        d="M12.966,12.966A3.483,3.483,0,1,0,9.483,9.483,3.482,3.482,0,0,0,12.966,12.966Zm0,1.741C10.641,14.707,6,15.874,6,18.19v1.741H19.932V18.19C19.932,15.874,15.291,14.707,12.966,14.707Z"
+                        transform="translate(424.034 284.034)"
+                        fill="rgba(0,0,0,0.54)"
+                      />
+                    </g>
+                  </svg>
+                  Profile
+                </a>
+              </li>
+              <li>
+                <a href="AdminUser.html" class="tabsBtn hoverColor">
+                  <svg
+                    class="path-color-hovered"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15.858"
+                    height="14.096"
+                    viewBox="0 0 15.858 14.096"
+                  >
+                    <path
+                      id="Icon_metro-users"
+                      data-name="Icon metro-users"
+                      d="M13.144,15.751v-.727a3.935,3.935,0,0,0,1.762-3.274c0-2.19,0-3.965-2.643-3.965S9.62,9.561,9.62,11.75a3.935,3.935,0,0,0,1.762,3.274v.727C8.393,16,6.1,17.464,6.1,19.239H18.43c0-1.775-2.3-3.244-5.286-3.488Zm-6.068.34a8.37,8.37,0,0,1,2.75-1.107,4.97,4.97,0,0,1-.557-.812,5.045,5.045,0,0,1-.64-2.421A7.822,7.822,0,0,1,9.05,8.533a2.868,2.868,0,0,1,2.192-1.645c-.233-1.053-.853-1.745-2.5-1.745C6.1,5.143,6.1,6.918,6.1,9.107a3.935,3.935,0,0,0,1.762,3.274v.727c-2.989.244-5.286,1.713-5.286,3.488H6.412a5.643,5.643,0,0,1,.663-.5Z"
+                      transform="translate(-2.571 -5.143)"
+                      fill="rgba(0,0,0,0.54)"
+                    />
+                  </svg>
+                  Users
+                </a>
+              </li>
+              <li>
+                <a href="AdminRoomTask.html" class="tabsBtn hoverColor">
+                  <svg
+                    class="path-color-hovered"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      id="Group_426"
+                      data-name="Group 426"
+                      transform="translate(-425 -285)"
+                    >
+                      <rect
+                        id="rectangle"
+                        width="24"
+                        height="24"
+                        transform="translate(425 285)"
+                        fill="rgba(255,0,0,0)"
+                      />
+                      <path
+                        id="Icon_awesome-clipboard-list"
+                        data-name="Icon awesome-clipboard-list"
+                        d="M9.2,1.753H7.01a1.753,1.753,0,1,0-3.505,0H1.314A1.315,1.315,0,0,0,0,3.067v9.639a1.315,1.315,0,0,0,1.314,1.314H9.2a1.315,1.315,0,0,0,1.314-1.314V3.067A1.315,1.315,0,0,0,9.2,1.753ZM2.629,11.611a.657.657,0,1,1,.657-.657A.656.656,0,0,1,2.629,11.611Zm0-2.629a.657.657,0,1,1,.657-.657A.656.656,0,0,1,2.629,8.982Zm0-2.629A.657.657,0,1,1,3.286,5.7.656.656,0,0,1,2.629,6.353ZM5.258,1.1a.657.657,0,1,1-.657.657A.656.656,0,0,1,5.258,1.1ZM8.763,11.173a.22.22,0,0,1-.219.219H4.6a.22.22,0,0,1-.219-.219v-.438a.22.22,0,0,1,.219-.219H8.544a.22.22,0,0,1,.219.219Zm0-2.629a.22.22,0,0,1-.219.219H4.6a.22.22,0,0,1-.219-.219V8.106A.22.22,0,0,1,4.6,7.887H8.544a.22.22,0,0,1,.219.219Zm0-2.629a.22.22,0,0,1-.219.219H4.6a.22.22,0,0,1-.219-.219V5.477A.22.22,0,0,1,4.6,5.258H8.544a.22.22,0,0,1,.219.219Z"
+                        transform="translate(431.721 290.295)"
+                        fill="rgba(0,0,0,0.54)"
+                      />
+                    </g>
+                  </svg>
+                  Tasks
+                </a>
+              </li>
+              <li>
+                <a href="download.html" class="tabsBtn hoverColor">
+                  <svg
+                    class="path-color-hovered"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      id="Group_427"
+                      data-name="Group 427"
+                      transform="translate(-425 -285)"
+                    >
+                      <rect
+                        id="rectangle"
+                        width="24"
+                        height="24"
+                        transform="translate(425 285)"
+                        fill="rgba(255,0,0,0)"
+                      />
+                      <path
+                        id="Icon_material-file-download"
+                        data-name="Icon material-file-download"
+                        d="M19.044,9.447h-3.3V4.5H10.8V9.447H7.5l5.772,5.772ZM7.5,16.868v1.649H19.044V16.868Z"
+                        transform="translate(423.228 285.241)"
+                        fill="rgba(0,0,0,0.54)"
+                      />
+                    </g>
+                  </svg>
+                  Downloads
+                </a>
+              </li>
+              <li>
+                <a href="dictionary.html" class="tabsBtn hoverColor">
+                  <svg
+                    class="path-color-hovered"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      id="Group_429"
+                      data-name="Group 429"
+                      transform="translate(-425 -285)"
+                    >
+                      <rect
+                        id="rectangle"
+                        width="24"
+                        height="24"
+                        transform="translate(425 285)"
+                        fill="rgba(255,0,0,0)"
+                      />
+                      <path
+                        id="Icon_awesome-book-open"
+                        data-name="Icon awesome-book-open"
+                        d="M13.154,2.251A13.487,13.487,0,0,0,7.551,3.6a.373.373,0,0,0-.176.319v8.827a.384.384,0,0,0,.565.327,14.8,14.8,0,0,1,5.305-1.138.757.757,0,0,0,.728-.744V3a.76.76,0,0,0-.819-.745ZM6.422,3.6a13.489,13.489,0,0,0-5.6-1.349A.761.761,0,0,0,0,3v8.2a.756.756,0,0,0,.728.744,14.794,14.794,0,0,1,5.307,1.139.383.383,0,0,0,.563-.327V3.915A.365.365,0,0,0,6.422,3.6Z"
+                        transform="translate(430.263 289.066)"
+                        fill="rgba(0,0,0,0.54)"
+                      />
+                    </g>
+                  </svg>
+                  Dictionary
+                </a>
+              </li>
+              <li>
+                <a href="assistantsLinguists.html" class="tabsBtn hoverColor">
+                  <svg
+                    class="path-color-hovered"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15.858"
+                    height="14.096"
+                    viewBox="0 0 15.858 14.096"
+                  >
+                    <path
+                      id="Icon_metro-users"
+                      data-name="Icon metro-users"
+                      d="M13.144,15.751v-.727a3.935,3.935,0,0,0,1.762-3.274c0-2.19,0-3.965-2.643-3.965S9.62,9.561,9.62,11.75a3.935,3.935,0,0,0,1.762,3.274v.727C8.393,16,6.1,17.464,6.1,19.239H18.43c0-1.775-2.3-3.244-5.286-3.488Zm-6.068.34a8.37,8.37,0,0,1,2.75-1.107,4.97,4.97,0,0,1-.557-.812,5.045,5.045,0,0,1-.64-2.421A7.822,7.822,0,0,1,9.05,8.533a2.868,2.868,0,0,1,2.192-1.645c-.233-1.053-.853-1.745-2.5-1.745C6.1,5.143,6.1,6.918,6.1,9.107a3.935,3.935,0,0,0,1.762,3.274v.727c-2.989.244-5.286,1.713-5.286,3.488H6.412a5.643,5.643,0,0,1,.663-.5Z"
+                      transform="translate(-2.571 -5.143)"
+                      fill="rgba(0,0,0,0.54)"
+                    />
+                  </svg>
+                  Assistants/Linguists
+                </a>
+              </li>
+              <li>
+                <a href="adminCorpus.html" class="tabsBtn hoverColor active">
+                  <svg
+                    class="path-color-hovered"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      id="Group_430"
+                      data-name="Group 430"
+                      transform="translate(-425 -285)"
+                    >
+                      <rect
+                        id="rectangle"
+                        width="24"
+                        height="24"
+                        transform="translate(425 285)"
+                        fill="rgba(255,0,0,0)"
+                      />
+                      <path
+                        id="Icon_ionic-ios-paper"
+                        data-name="Icon ionic-ios-paper"
+                        d="M5.933,4.452V15.29a.473.473,0,0,1-.471.471h0a.473.473,0,0,1-.471-.471V5.529H4.452A1.076,1.076,0,0,0,3.375,6.606V16.3a1.076,1.076,0,0,0,1.077,1.077H16.337a1.041,1.041,0,0,0,1.04-1.04V4.452A1.076,1.076,0,0,0,16.3,3.375l-9.357.067A.965.965,0,0,0,5.933,4.452ZM8.155,5.529h2.827A.473.473,0,0,1,11.453,6h0a.473.473,0,0,1-.471.471H8.155A.473.473,0,0,1,7.683,6h0A.473.473,0,0,1,8.155,5.529Zm0,5.385h4.981a.473.473,0,0,1,.471.471h0a.473.473,0,0,1-.471.471H8.155a.473.473,0,0,1-.471-.471h0A.473.473,0,0,1,8.155,10.915Zm6.6,3.635h-6.6a.473.473,0,0,1-.471-.471h0a.473.473,0,0,1,.471-.471h6.6a.473.473,0,0,1,.471.471h0A.473.473,0,0,1,14.752,14.55Zm0-5.385h-6.6a.473.473,0,0,1-.471-.471h0a.473.473,0,0,1,.471-.471h6.6a.473.473,0,0,1,.471.471h0A.473.473,0,0,1,14.752,9.164Z"
+                        transform="translate(426.249 286.249)"
+                        fill="rgba(0,0,0,0.54)"
+                      />
+                    </g>
+                  </svg>
+                  Corpus
+                </a>
+              </li>
+            </nav>
+          </li>
+          <li class="has-submenu">
+            <a class="open-inside-nav hoverColor"> Tools my </a>
+            <nav class="inside-nav">
+              <li>
+                <a href="spell-checker.html" class="tabsBtn hoverColor">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="13.025"
+                    height="9.929"
+                    viewBox="0 0 13.025 9.929"
+                    class="path-color-hovered"
+                  >
+                    <path
+                      id="Icon_material-check"
+                      data-name="Icon material-check"
+                      d="M9.254,16.219,6.166,13.131,5.115,14.175l4.139,4.139L18.14,9.429,17.1,8.385Z"
+                      transform="translate(-5.115 -8.385)"
+                      fill="rgba(0,0,0,0.54)"
+                    />
+                  </svg>
+                  Spell Checker
+                </a>
+              </li>
+              <li>
+                <a href="speech-recognition.html" class="tabsBtn hoverColor">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10.313"
+                    height="15"
+                    viewBox="0 0 10.313 15"
+                    class="path-color-hovered"
+                  >
+                    <path
+                      id="Icon_awesome-microphone"
+                      data-name="Icon awesome-microphone"
+                      d="M5.156,10.313A2.812,2.812,0,0,0,7.969,7.5V2.813a2.813,2.813,0,0,0-5.625,0V7.5A2.812,2.812,0,0,0,5.156,10.313ZM9.844,5.625H9.375a.469.469,0,0,0-.469.469V7.5a3.754,3.754,0,0,1-4.125,3.732,3.864,3.864,0,0,1-3.375-3.9V6.094a.469.469,0,0,0-.469-.469H.469A.469.469,0,0,0,0,6.094V7.27a5.318,5.318,0,0,0,4.453,5.323v1H2.813a.469.469,0,0,0-.469.469v.469A.469.469,0,0,0,2.813,15H7.5a.469.469,0,0,0,.469-.469v-.469a.469.469,0,0,0-.469-.469H5.859V12.6a5.161,5.161,0,0,0,4.453-5.1V6.094A.469.469,0,0,0,9.844,5.625Z"
+                      fill="rgba(0,0,0,0.54)"
+                    />
+                  </svg>
+                  Speech Recognition
+                </a>
+              </li>
+              <li>
+                <a href="ocr.html" class="tabsBtn hoverColor">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15.25"
+                    height="16.823"
+                    viewBox="0 0 15.25 16.823"
+                    class="path-color-hovered"
+                  >
+                    <path
+                      id="arrow"
+                      d="M15.683,12.111l.344.157v3.325l-.759-.231a7.45,7.45,0,0,1-3.753-2.631,7.391,7.391,0,0,1,0-8.878,7.458,7.458,0,0,1,2.22-1.962L12.937,0l5,1.874L15.871,6.951l-.878-2.08a4.2,4.2,0,0,0,.69,7.239ZM23.8,3.853a7.45,7.45,0,0,0-3.753-2.631L19.289.99V4.315l.344.157a4.2,4.2,0,0,1,.587,7.311l-.844-2.154-2.187,5.007L22.2,16.824l-.8-2.029a7.464,7.464,0,0,0,2.4-2.065,7.391,7.391,0,0,0,0-8.878Z"
+                      transform="translate(-10.033)"
+                      fill="rgba(0,0,0,0.54)"
+                    />
+                  </svg>
+                  OCR
+                </a>
+              </li>
+              <li>
+                <a href="text-synthesize.html" class="tabsBtn hoverColor">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16.41"
+                    height="14.173"
+                    viewBox="0 0 16.41 14.173"
+                    class="path-color-hovered"
+                  >
+                    <g
+                      id="Icon_material-record-voice-over"
+                      data-name="Icon material-record-voice-over"
+                      transform="translate(-1.5 -3)"
+                    >
+                      <path
+                        id="Path_96"
+                        data-name="Path 96"
+                        d="M13.468,10.484A2.984,2.984,0,1,1,10.484,7.5,2.984,2.984,0,0,1,13.468,10.484Z"
+                        transform="translate(-3.016 -2.262)"
+                        fill="rgba(0,0,0,0.54)"
+                      />
+                      <path
+                        id="Path_97"
+                        data-name="Path 97"
+                        d="M7.468,12.7c-1.992,0-5.968,1-5.968,2.984v1.492H13.435V15.681C13.435,13.7,9.459,12.7,7.468,12.7Zm5.788-7.191L12,6.767a2.475,2.475,0,0,1,0,2.9l1.253,1.261A3.817,3.817,0,0,0,13.256,5.506ZM15.725,3,14.509,4.216a5.951,5.951,0,0,1,0,8.011l1.216,1.216A7.332,7.332,0,0,0,15.725,3Z"
+                        fill="rgba(0,0,0,0.54)"
+                      />
+                    </g>
+                  </svg>
+                  Text Synthesizer
+                </a>
+              </li>
+              <li>
+                <a href="freeFonts.html" class="tabsBtn hoverColor">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14.373"
+                    height="14.373"
+                    viewBox="0 0 14.373 14.373"
+                    class="path-color-hovered"
+                  >
+                    <path
+                      id="Icon_material-font-download"
+                      data-name="Icon material-font-download"
+                      d="M8.7,11.265h2.975L10.187,7.3ZM15.936,3H4.437A1.442,1.442,0,0,0,3,4.437v11.5a1.442,1.442,0,0,0,1.437,1.437h11.5a1.442,1.442,0,0,0,1.437-1.437V4.437A1.442,1.442,0,0,0,15.936,3ZM13.025,14.858,12.206,12.7H8.153l-.8,2.156h-1.5L9.518,5.515h1.337l3.672,9.342h-1.5Z"
+                      transform="translate(-3 -3)"
+                      fill="rgba(0,0,0,0.54)"
+                    />
+                  </svg>
+                  Free Fonts
+                </a>
+              </li>
+            </nav>
+          </li>
+          <li><a href="about.html" class="hoverColor">About</a></li>
+          <li><a href="contact.html" class="hoverColor">Contact</a></li>
+          <li><a href="" class="hoverColor">Support</a></li>
+          <li><a href="" class="hoverColor">Privacy policy</a></li>
+        </div>
+      </nav>
+      <section class="section__container">
+        <div class="scrollable-content">
+          <div class="main-flex">
+            <div class="adminCorpusContainer">
+                <div class="corpusLeft">
+                    <div class="ttl">Corpus</div>
+                    <div class="corpusLeftInner">
+                        <div class="corpusLeftHead">
+                            <div class="txt">Title:</div>
+                            <div class="txt">1-71 Articles From 71</div>
+                        </div>
+                        <div class="corpusLeftContentOuter">
+                            <div class="corpusLeftContent">
+                            <div data-index="0">Long Established</div>
+                            <div data-index="1">Many Desktop</div>
+                            <div data-index="2">Publishing Packages</div>
+                            <div data-index="3">Page Editors</div>
+                            <div data-index="4">First True</div>
+                            <div data-index="0">Long Established</div>
+                            <div data-index="1">Many Desktop</div>
+                            <div data-index="2">Publishing Packages</div>
+                            <div data-index="3">Page Editors</div>
+                            <div data-index="4">First True</div>
+                            <div data-index="0">Long Established</div>
+                            <div data-index="1">Many Desktop</div>
+                            <div data-index="2">Publishing Packages</div>
+                            <div data-index="3">Page Editors</div>
+                            <div data-index="4">First True</div>
+                            <div data-index="0">Long Established</div>
+                            <div data-index="1">Many Desktop</div>
+                            <div data-index="2">Publishing Packages</div>
+                            <div data-index="3">Page Editors</div>
+                            <div data-index="4">First True</div>
+                            <div data-index="0">Long Established</div>
+                            <div data-index="1">Many Desktop</div>
+                            <div data-index="2">Publishing Packages</div>
+                            <div data-index="3">Page Editors</div>
+                            <div data-index="4">First True</div>
+                            <div data-index="0">Long Established</div>
+                            <div data-index="1">Many Desktop</div>
+                            <div data-index="2">Publishing Packages</div>
+                            <div data-index="3">Page Editors</div>
+                            <div data-index="4">First True</div>
+                            <div data-index="0">Long Established</div>
+                            <div data-index="1">Many Desktop</div>
+                            <div data-index="2">Publishing Packages</div>
+                            <div data-index="3">Page Editors</div>
+                            <div data-index="4">First True</div>
+                            <div data-index="0">Long Established</div>
+                            <div data-index="1">Many Desktop</div>
+                            <div data-index="2">Publishing Packages</div>
+                            <div data-index="3">Page Editors</div>
+                            <div data-index="4">First True</div>
+                            <div data-index="0">Long Established</div>
+                            <div data-index="1">Many Desktop</div>
+                            <div data-index="2">Publishing Packages</div>
+                            <div data-index="3">Page Editors</div>
+                            <div data-index="4">First True</div>
+                            <div data-index="0">Long Established</div>
+                            <div data-index="1">Many Desktop</div>
+                            <div data-index="2">Publishing Packages</div>
+                            <div data-index="3">Page Editors</div>
+                            <div data-index="4">First True</div>
+                        </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="user-room-item corpus">
-                <div class="top">
-                    <div class="left">
-                        <h1 class=" ttl">Paragraph</h1>
-                        <div class="tabsLangContainer">
-                            <div class="tabsLangContainerTtl tabsBtn">
-                                <input type="text" class="tabsLangInput" hidden>
-                                <span>Geo</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 10 5"
-                                     class="path-color">
-                                    <path id="path" d="M7,15l5-5,5,5Z" transform="translate(17 15) rotate(180)"
-                                          fill="#eb4d4b" fill-rule="evenodd"></path>
-                                </svg>
-                            </div>
-                            <div class="tabsLangSelectContainer">
-                                <div class="ttlContainer">
-                                    Language
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                         width="14" height="14" viewBox="0 0 14 14">
-                                        <defs>
-                                            <clipPath id="clip-path">
-                                                <rect width="14" height="14" fill="none" />
-                                            </clipPath>
-                                        </defs>
-                                        <g id="Repeat_Grid_1" data-name="Repeat Grid 1" clip-path="url(#clip-path)">
-                                            <g transform="translate(-5 -5)">
-                                                <path id="path"
-                                                      d="M19,6.4,17.6,5,12,10.6,6.4,5,5,6.4,10.6,12,5,17.6,6.4,19,12,13.4,17.6,19,19,17.6,13.4,12Z"
-                                                      fill-rule="evenodd" opacity="0.54" />
-                                            </g>
-                                        </g>
+                <div class="user-room-item corpus adminCorpus">
+                    <div class="top">
+                        <div class="left">
+                            <h1 class=" ttl">Paragraph</h1>
+                            <div class="tabsLangContainer">
+                                <div class="tabsLangContainerTtl tabsBtn">
+                                    <input type="text" class="tabsLangInput" hidden>
+                                    <span>Geo</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 10 5"
+                                        class="path-color">
+                                        <path id="path" d="M7,15l5-5,5,5Z" transform="translate(17 15) rotate(180)"
+                                            fill="#eb4d4b" fill-rule="evenodd"></path>
                                     </svg>
                                 </div>
-                                <div class="tabsLangSelectInner">
-                                    <a class="hoverColor" data-value="0">Usd</a>
-                                    <a class="hoverColor" data-value="1">Rus</a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="right">
-                        <div>
-                            <div class="add-word">
-                                <span>Add Word:</span>
-                                <div class="input-wrap">
-                                    <input type="text" placeholder="Word" class="f-input">
-                                    <div class="error-msg">
-                                        <span>error msg</span>
+                                <div class="tabsLangSelectContainer">
+                                    <div class="ttlContainer">
+                                        Language
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            width="14" height="14" viewBox="0 0 14 14">
+                                            <defs>
+                                                <clipPath id="clip-path">
+                                                    <rect width="14" height="14" fill="none" />
+                                                </clipPath>
+                                            </defs>
+                                            <g id="Repeat_Grid_1" data-name="Repeat Grid 1" clip-path="url(#clip-path)">
+                                                <g transform="translate(-5 -5)">
+                                                    <path id="path"
+                                                        d="M19,6.4,17.6,5,12,10.6,6.4,5,5,6.4,10.6,12,5,17.6,6.4,19,12,13.4,17.6,19,19,17.6,13.4,12Z"
+                                                        fill-rule="evenodd" opacity="0.54" />
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="tabsLangSelectInner">
+                                        <a class="hoverColor" data-value="0">Usd</a>
+                                        <a class="hoverColor" data-value="1">Rus</a>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="checkbox-wrap">
-                                <label for="" class="font-13 checkbox-label">
-                                    <input type="checkbox">
-                                    <span></span>
-                                    Whole Phrase
-                                </label>
                             </div>
                         </div>
-                        <button class="btn bg-btn bg-color">
-                            <span>Search</span>
-                        </button>
+                        <div class="right">
+                            <div>
+                                <div class="add-word">
+                                    <span>Add Word:</span>
+                                    <div class="input-wrap">
+                                        <input type="text" placeholder="Word" class="f-input">
+                                        <div class="error-msg">
+                                            <span>error msg</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkbox-wrap">
+                                    <label for="" class="font-13 checkbox-label">
+                                        <input type="checkbox">
+                                        <span></span>
+                                        Whole Phrase
+                                    </label>
+                                </div>
+                            </div>
+                            <button class="btn bg-btn bg-color">
+                                <span>Search</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="search-area">
+                        <div class="content">
+                            <a href="#" class="text-color">Lorem ipsum dolor sit amet.</a>
+                            </br>
+                            </br>
+                            Lorem ipsum <span class="bg-color hint">blb bla bla</span>dolor sit amet, consectetur
+                            adipisicing elit. Hic quas molestias nemo fugit quia nesciunt, blanditiis illum quam, maxime
+                            reprehenderit nisi ex voluptatum a quod et ducimus adipisci iusto beatae commodi quos in eum
+                            nostrum qui. Nulla est at quos alias obcaecati numquam cupiditate quasi, consequuntur assumenda
+                            aperiam quo accusantium praesentium eaque debitis! Nobis iste amet fugiat distinctio doloribus
+                            enim.
+                            adipisicing elit. Hic quas molestias nemo fugit quia nesciunt, blanditiis illum quam, maxime
+                            reprehenderit nisi ex voluptatum a quod et ducimus adipisci iusto beatae commodi quos in eum
+                            nostrum qui. Nulla est at quos alias obcaecati numquam cupiditate quasi, consequuntur assumenda
+                            aperiam quo accusantium praesentium eaque debitis! Nobis iste amet fugiat distinctio doloribus
+                            enim.
+                            adipisicing elit. Hic quas molestias nemo fugit quia nesciunt, blanditiis illum quam, maxime
+                            reprehenderit nisi ex voluptatum a quod et ducimus adipisci iusto beatae commodi quos in eum
+                            nostrum qui. Nulla est at quos alias obcaecati numquam cupiditate quasi, consequuntur assumenda
+                            aperiam quo accusantium praesentium eaque debitis! Nobis iste amet fugiat distinctio doloribus
+                            enim.
+                            adipisicing elit. Hic quas molestias nemo fugit quia nesciunt, blanditiis illum quam, maxime
+                            reprehenderit nisi ex voluptatum a quod et ducimus adipisci iusto beatae commodi quos in eum
+                            nostrum qui. Nulla est at quos alias obcaecati numquam cupiditate quasi, consequuntur assumenda
+                            aperiam quo accusantium praesentium eaque debitis! Nobis iste amet fugiat distinctio doloribus
+                            enim.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos neque doloribus vitae, voluptas
+                            perferendis perspiciatis consequatur minus blanditiis quasi labore deserunt pariatur velit in
+                            natus asperiores, aliquid architecto ad repudiandae odio non mollitia quo maxime accusamus
+                            ducimus amet. Suscipit corporis mollitia sint sit excepturi porro nemo ipsa explicabo ducimus
+                            necessitatibus reprehenderit beatae architecto fuga quisquam ipsam vel exercitationem quis
+                            accusantium optio iure ratione consequatur, dolores, illum. Facere blanditiis ex voluptatum,
+                            architecto veritatis fugiat ducimus incidunt praesentium iusto! Suscipit voluptates facilis,
+                            quis ducimus ab fuga vel molestias natus odit voluptate cum. Voluptatem modi, architecto
+                            molestias, vero laborum similique repellendus. Cupiditate reiciendis, quas distinctio ad
+                            blanditiis, facilis debitis quaerat nam eaque, in sed facere, eum quae odio minus tenetur
+                            excepturi fugiat accusantium! Expedita animi at ducimus. At iste quod alias distinctio odio qui
+                            inventore neque, quisquam nam amet, magnam maxime cum, non culpa assumenda cupiditate, error ab.
+                            Distinctio facere libero nam laboriosam praesentium eius omnis, non in et consequuntur sed, aut
+                            perspiciatis ullam, deserunt sit totam aperiam voluptates temporibus nulla, necessitatibus quod
+                            amet nesciunt? Incidunt quo quod, vel laudantium excepturi, sint voluptate consequatur atque, a
+                            nisi ipsa earum sequi quis dolores laboriosam, sed voluptatem eligendi? Culpa eaque, assumenda
+                            quod sit quaerat nam dicta soluta fuga ab adipisci. Excepturi voluptas maxime alias. Perferendis
+                            similique dignissimos quam quasi mollitia optio accusamus tempore laudantium repellendus nihil
+                            architecto eum aperiam rerum omnis magni amet nemo alias vero dolore, labore aliquam itaque,
+                            voluptate dolor fugit! Qui sunt, vel. Quaerat explicabo delectus aliquid ex in at odio
+                            consectetur dignissimos quas perferendis iste, eos, aliquam perspiciatis suscipit ratione
+                            eveniet, laboriosam nam harum expedita deserunt magnam cumque aut illum animi excepturi? Earum,
+                            aperiam ea non nam placeat fugiat necessitatibus voluptate, cupiditate? Laudantium blanditiis
+                            expedita fuga ipsum, animi possimus nostrum provident, quasi. Aut molestiae laudantium, mollitia
+                            illo magni facilis asperiores nisi fugiat ea, praesentium doloribus id accusamus eum eligendi
+                        </div>
                     </div>
                 </div>
-
-                <div class="search-area">
-                    <div class="content">
-
-                        <a href="#" class="text-color">Lorem ipsum dolor sit amet.</a>
-                        </br>
-                        </br>
-                        Lorem ipsum <span class="bg-color hint">blb bla bla</span>dolor sit amet, consectetur
-                        adipisicing elit. Hic quas molestias nemo fugit quia nesciunt, blanditiis illum quam, maxime
-                        reprehenderit nisi ex voluptatum a quod et ducimus adipisci iusto beatae commodi quos in eum
-                        nostrum qui. Nulla est at quos alias obcaecati numquam cupiditate quasi, consequuntur assumenda
-                        aperiam quo accusantium praesentium eaque debitis! Nobis iste amet fugiat distinctio doloribus
-                        enim.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos neque doloribus vitae, voluptas
-                        perferendis perspiciatis consequatur minus blanditiis quasi labore deserunt pariatur velit in
-                        natus asperiores, aliquid architecto ad repudiandae odio non mollitia quo maxime accusamus
-                        ducimus amet. Suscipit corporis mollitia sint sit excepturi porro nemo ipsa explicabo ducimus
-                        necessitatibus reprehenderit beatae architecto fuga quisquam ipsam vel exercitationem quis
-                        accusantium optio iure ratione consequatur, dolores, illum. Facere blanditiis ex voluptatum,
-                        architecto veritatis fugiat ducimus incidunt praesentium iusto! Suscipit voluptates facilis,
-                        quis ducimus ab fuga vel molestias natus odit voluptate cum. Voluptatem modi, architecto
-                        molestias, vero laborum similique repellendus. Cupiditate reiciendis, quas distinctio ad
-                        blanditiis, facilis debitis quaerat nam eaque, in sed facere, eum quae odio minus tenetur
-                        excepturi fugiat accusantium! Expedita animi at ducimus. At iste quod alias distinctio odio qui
-                        inventore neque, quisquam nam amet, magnam maxime cum, non culpa assumenda cupiditate, error ab.
-                        Distinctio facere libero nam laboriosam praesentium eius omnis, non in et consequuntur sed, aut
-                        perspiciatis ullam, deserunt sit totam aperiam voluptates temporibus nulla, necessitatibus quod
-                        amet nesciunt? Incidunt quo quod, vel laudantium excepturi, sint voluptate consequatur atque, a
-                        nisi ipsa earum sequi quis dolores laboriosam, sed voluptatem eligendi? Culpa eaque, assumenda
-                        quod sit quaerat nam dicta soluta fuga ab adipisci. Excepturi voluptas maxime alias. Perferendis
-                        similique dignissimos quam quasi mollitia optio accusamus tempore laudantium repellendus nihil
-                        architecto eum aperiam rerum omnis magni amet nemo alias vero dolore, labore aliquam itaque,
-                        voluptate dolor fugit! Qui sunt, vel. Quaerat explicabo delectus aliquid ex in at odio
-                        consectetur dignissimos quas perferendis iste, eos, aliquam perspiciatis suscipit ratione
-                        eveniet, laboriosam nam harum expedita deserunt magnam cumque aut illum animi excepturi? Earum,
-                        aperiam ea non nam placeat fugiat necessitatibus voluptate, cupiditate? Laudantium blanditiis
-                        expedita fuga ipsum, animi possimus nostrum provident, quasi. Aut molestiae laudantium, mollitia
-                        illo magni facilis asperiores nisi fugiat ea, praesentium doloribus id accusamus eum eligendi
-                        quaerat unde, magnam dignissimos libero! Nihil exercitationem voluptatibus quia iusto esse illo
-                        doloremque, unde distinctio in neque expedita incidunt provident libero voluptas, consequuntur,
-                        alias quibusdam laboriosam ut ducimus saepe? Omnis nisi mollitia, eligendi sunt delectus?
-                        Voluptas laboriosam enim, sapiente autem illum expedita vitae voluptate libero beatae animi
-                        dolores minus at hic provident itaque distinctio nihil repellendus quaerat officia veritatis?
-                        Quod qui et molestias, provident nulla laudantium eaque reprehenderit eligendi incidunt deserunt
-                        aliquid nemo suscipit tempora natus beatae ducimus est amet laboriosam, atque quam totam non
-                        iste minus at ipsam. Nihil animi excepturi saepe enim in, ratione provident quaerat iusto id hic
-                        tempore vero itaque dicta alias. Deleniti a voluptates unde iste beatae doloremque sed, deserunt
-                        accusantium voluptatibus quasi harum libero facilis fugiat delectus quisquam rerum eum minima,
-                        temporibus distinctio possimus! Et libero numquam magni, quisquam est illum beatae vitae quam
-                        suscipit itaque nesciunt obcaecati ab cumque nihil molestiae ullam animi, quibusdam quis.
-                        Dolores nihil repudiandae, laborum amet praesentium iusto. Est culpa inventore accusamus nisi
-                        repellendus laudantium totam aliquid officiis provident hic voluptates consequatur saepe magni,
-                        adipisci labore, aperiam nihil voluptatibus iusto! Nisi itaque quisquam unde perspiciatis porro
-                        illum repellat numquam dolorum, ut! Temporibus alias ab voluptates praesentium. Qui impedit
-                        architecto nesciunt cumque, atque totam, corporis labore reiciendis voluptatibus deleniti maxime
-                        beatae rem quam voluptas debitis doloremque quae iste possimus. Nisi ducimus necessitatibus id
-                        aspernatur deleniti tempore ex quos earum autem libero accusantium magni quia facilis veritatis
-                        soluta amet dicta, fugit, numquam quisquam cum doloribus. Tempora delectus nostrum repellendus
-                        exercitationem expedita facilis, libero a repellat, deserunt doloribus amet eius, quos in.
-                        Tempore animi provident ipsum, impedit assumenda incidunt, voluptate quidem, atque velit facilis
-                        quod cupiditate voluptates reprehenderit consequuntur mollitia quibusdam molestias nulla fuga
-                        asperiores dolorum. Quo quam, libero minus mollitia tenetur delectus, tempora in? Molestias
-                        possimus alias perferendis dolorum necessitatibus quaerat. Vero quae quaerat quod repudiandae
-                        voluptatem pariatur architecto ratione porro, et neque incidunt culpa, esse illum officia
-                        perspiciatis voluptates, laboriosam magnam. Magni maxime obcaecati sint illum quae porro, vel
-                        quas, temporibus eveniet libero, necessitatibus voluptatum, itaque eaque nulla quam saepe quos.
-                        Sint quasi nam impedit, sapiente asperiores in voluptatem rerum, tempore, maiores placeat odio
-                        dolore dolorum eaque laudantium error a sunt beatae dolores culpa dolorem temporibus cum
-                        voluptate. Quisquam facilis, tempora, rerum nostrum, repellendus aliquid sed dolorum saepe eum
-                        neque beatae deserunt, dolorem dolores nihil asperiores assumenda laborum incidunt velit ratione
-                        accusantium quam quod! Corporis numquam eius repellendus necessitatibus, possimus porro atque
-                        molestias perferendis incidunt asperiores excepturi consectetur, dignissimos tenetur beatae
-                        delectus odio ad dolores dolore quia reiciendis? Dicta, modi distinctio illo ex culpa,
-                        voluptatum nulla saepe unde omnis quas velit veritatis nesciunt placeat eum! Pariatur inventore
-                        consectetur nostrum tempore ea quisquam natus non. Nulla numquam recusandae commodi dolor, nemo
-                        quod, fuga voluptatibus voluptatem error adipisci placeat alias iste doloremque veritatis iusto
-                        expedita modi tempore dignissimos quas explicabo laborum. Dolorem sit, fugiat aperiam excepturi.
-                        Nobis, itaque alias, et, dolorem eligendi libero impedit ullam cumque nesciunt magni dolores
-                        vitae eum. Unde, obcaecati, hic.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla quod reprehenderit, dolor
-                        tempore tenetur, nesciunt perferendis dolorum odit provident officia rem nemo libero maxime
-                        veritatis! Eligendi odit aliquam vero quasi, nulla, amet tempora corrupti! Ipsa, quibusdam dicta
-                        corporis itaque eligendi ab hic consectetur vero placeat, inventore voluptatibus eius et
-                        repellendus.
-
-                    </div>
-                </div>
-
+            </div>
             </div>
         </div>
+      </section>
+    </main>
 
-
-    </div>
-
-</div>
-</div>
 <footer class="container">
     <div class="footerInner">
         <a href="##" class="companyLogo">

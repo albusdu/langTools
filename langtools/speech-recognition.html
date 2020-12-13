@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="icon"
+      href="./img/owl-symbol.png"
+      type="image/png"
+      sizes="16x16"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -26,27 +32,7 @@
         </div>
         <div class="container-tools speech-recognition flex-box al-center">
           <div>
-            <button
-              class="speech-button flex-box al-center justify-center btn bg-color"
-            >
-              <div class="svgBg"></div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="10.313"
-                height="15"
-                viewBox="0 0 10.313 15"
-              >
-                <path
-                  id="Icon_awesome-microphone"
-                  data-name="Icon awesome-microphone"
-                  d="M5.156,10.313A2.812,2.812,0,0,0,7.969,7.5V2.813a2.813,2.813,0,0,0-5.625,0V7.5A2.812,2.812,0,0,0,5.156,10.313ZM9.844,5.625H9.375a.469.469,0,0,0-.469.469V7.5a3.754,3.754,0,0,1-4.125,3.732,3.864,3.864,0,0,1-3.375-3.9V6.094a.469.469,0,0,0-.469-.469H.469A.469.469,0,0,0,0,6.094V7.27a5.318,5.318,0,0,0,4.453,5.323v1H2.813a.469.469,0,0,0-.469.469v.469A.469.469,0,0,0,2.813,15H7.5a.469.469,0,0,0,.469-.469v-.469a.469.469,0,0,0-.469-.469H5.859V12.6a5.161,5.161,0,0,0,4.453-5.1V6.094A.469.469,0,0,0,9.844,5.625Z"
-                  fill="#fff"
-                />
-              </svg>
-              <div class="ttl">Start</div>
-              <div class="ttl stopSpeach">Stop</div>
-            </button>
-            <div class="scnd">
+            <div class="scnd hover-tooltip">
               <!-- <div class="ttl">Dialect</div> -->
               <div class="tabsLangContainer">
                 <div class="tabsLangContainerTtl tabsBtn imgUplBtn">
@@ -108,7 +94,33 @@
                   </div>
                 </div>
               </div>
+              <div class="tooltip__container bg-color">
+                <span>ახსნა</span>
+              </div>
             </div>
+            <button
+              class="hover-tooltip speech-button flex-box al-center justify-center btn bg-color"
+            >
+              <div class="svgBg"></div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="10.313"
+                height="15"
+                viewBox="0 0 10.313 15"
+              >
+                <path
+                  id="Icon_awesome-microphone"
+                  data-name="Icon awesome-microphone"
+                  d="M5.156,10.313A2.812,2.812,0,0,0,7.969,7.5V2.813a2.813,2.813,0,0,0-5.625,0V7.5A2.812,2.812,0,0,0,5.156,10.313ZM9.844,5.625H9.375a.469.469,0,0,0-.469.469V7.5a3.754,3.754,0,0,1-4.125,3.732,3.864,3.864,0,0,1-3.375-3.9V6.094a.469.469,0,0,0-.469-.469H.469A.469.469,0,0,0,0,6.094V7.27a5.318,5.318,0,0,0,4.453,5.323v1H2.813a.469.469,0,0,0-.469.469v.469A.469.469,0,0,0,2.813,15H7.5a.469.469,0,0,0,.469-.469v-.469a.469.469,0,0,0-.469-.469H5.859V12.6a5.161,5.161,0,0,0,4.453-5.1V6.094A.469.469,0,0,0,9.844,5.625Z"
+                  fill="#fff"
+                />
+              </svg>
+              <div class="ttl">Start</div>
+              <div class="ttl stopSpeach">Stop</div>
+              <div class="tooltip__container bg-color">
+                <span>ახსნა</span>
+              </div>
+            </button>
           </div>
         </div>
         <div class="header-left flex-box">
