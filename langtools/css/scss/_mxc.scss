@@ -12,7 +12,7 @@
   height: 36px;
   display: flex;
   align-items: center;
-  padding: 0px 16px;
+  padding: 0px 10px;
   cursor: pointer;
   transition: 0.6s;
   border-radius: 2px;
@@ -33,8 +33,7 @@
   z-index: 5;
 }
 .tabsLangContainerTtl svg {
-  margin-left: 16px;
-  margin-right: 6px;
+  margin-left: 10px;
   transition: 0.6s;
 }
 .tabsBtn.active,
@@ -858,7 +857,7 @@ input[type='number'] {
   z-index: 8;
   border: none;
   position: sticky;
-  top: 100px;
+  top: 116px;
 }
 .leftInner.tbHead .colTxt {
   opacity: 0;
@@ -894,6 +893,8 @@ input[type='number'] {
   display: flex;
   flex-direction: column;
   height: fit-content;
+  position: sticky;
+  top: 116px;
 }
 .corpusLeftInner {
   width: 100%;
@@ -916,7 +917,7 @@ input[type='number'] {
   overflow: hidden;
 }
 .corpusLeft > .ttl {
-  margin-top: 13px;
+  // margin-top: 13px;
   margin-bottom: 17px;
 }
 .corpusLeftContent {
@@ -974,10 +975,15 @@ button.disabled {
 .user-room-item .inp {
   font-size: 12px;
 }
+.change-password{
+  margin-top: 0;
+}
 .searchCont {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 16px;
+}
+.searchCont .tabsLangContainer{
+  margin-right: 5px;
 }
 .container-tools.speech-recognition {
   flex-wrap: wrap;
@@ -1308,6 +1314,13 @@ button.disabled {
   }
   .corpusLeft {
     padding-left: 0px;
+    top: 172px;
+    z-index: 99;
+    background: #fff;
+  }
+  .adminCorpusContainer .user-room-item{
+    margin-left: 0;
+    margin-top: 20px;
   }
   .adminCorpusContainer {
     width: 100%;

@@ -147,13 +147,50 @@ $(document).on('click', '.speech-button', function () {
   $(this).toggleClass('active')
 })
 setTimeout(() => {
-  let mainPaddingTop = `${$('.header').height() + 15}px`
+  let mainPaddingTop = `${$('.header').height()}px`
   $('main.container, nav.sidebar').css('padding-top', mainPaddingTop)
 }, 100)
 
 $(window).resize(function () {
   setTimeout(() => {
-    let mainPaddingTop = `${$('.header').height() + 15}px`
+    let mainPaddingTop = `${$('.header').height()}px`
     $('main.container, nav.sidebar').css('padding-top', mainPaddingTop)
   }, 100)
 })
+
+//browse and upload
+$("#select_and_upload_button").click(function () { $("#files_input_field").click(); });
+function upload_files() {
+//------< upload_files() >------
+//--< get selected files >--
+  var fileUpload = $("#files_input_field").get(0);
+  var files = fileUpload.files;
+  console.log(files)
+  $('.imgUploadTtl span').text(files[0].name)
+  $(".imgUploadTtlOuter").css("width",$(".imgUploadTtlOuterHeight").width() + "px");
+  $(".imgUploadTtlOuter").addClass("open");
+  if (files.length == 0) return;
+//< load into FormData >
+  var data = new FormData();
+  for (var i = 0; i < files.length; i++) {
+      data.append(files[i].name, files[i]);
+    }
+//</ load into FormData >
+//--</ get selected files >--
+//--< ajax upload >--
+  $.ajax({
+      type: "POST",
+      url: "",
+      contentType: false,  //default: 'application/x-www-form-urlencoded; charset=UTF-8'
+      processData: false,  //default: data, other DOMDocument
+      data: data,          //Type: PlainObject or String or Array
+      //password:string    // HTTP access authentication
+      //username:string    // HTTP access authentication
+      success: function (message) {
+          alert(message);
+      },
+      error: function () {
+          console.log("There was error uploading files!");
+      }
+  });
+}

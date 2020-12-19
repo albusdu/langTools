@@ -238,6 +238,9 @@
   .but-cont {
     width: 100%;
   }
+  .but-cont .text{
+    display: none;
+  }
   .secright {
     width: 100%;
   }
@@ -246,10 +249,5 @@
   }
   .sec-mobile {
     width: 59% !important;
-  }
-}
-@media (max-width: 496px) {
-  .but-cont {
-    flex-direction: column;
   }
 }
