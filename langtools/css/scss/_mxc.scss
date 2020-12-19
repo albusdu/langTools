@@ -278,17 +278,17 @@ footer {
   position: relative;
   margin-left: 16px;
 }
-.recognizedBtn:after {
-  position: absolute;
-  top: 0px;
-  left: -16px;
-  width: 1px;
-  height: 100%;
-  background: #000000;
-  opacity: 0.12;
-  content: '';
-  border-radius: 20px;
-}
+// .recognizedBtn:after {
+//   position: absolute;
+//   top: 0px;
+//   left: -16px;
+//   width: 1px;
+//   height: 100%;
+//   background: #000000;
+//   opacity: 0.12;
+//   content: '';
+//   border-radius: 20px;
+// }
 .recognizedBtn:hover {
   background: #f6f6f6 !important;
   color: #000;
@@ -1254,9 +1254,9 @@ button.disabled {
   .recognizedBtn {
     margin-left: 10px;
   }
-  .recognizedBtn:after {
-    left: -10px;
-  }
+  // .recognizedBtn:after {
+  //   left: -10px;
+  // }
   .imgUploadTabsContainer .ttl,
   .imgUplBtn {
     margin-right: 10px;
@@ -1479,9 +1479,9 @@ button.disabled {
   /* body {
     padding-bottom: 117px;
   } */
-  .recognizedBtn:after {
-    display: none;
-  }
+  // .recognizedBtn:after {
+  //   display: none;
+  // }
   .container-tools.speech-recognition .ttl {
     margin-right: 10px;
   }

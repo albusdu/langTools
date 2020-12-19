@@ -103,13 +103,13 @@
               </div>
             </div>
             <button
-              class="flex-box al-center justify-center btn bg-color hover-tooltip"
-            >
-              Run
-              <div class="tooltip__container bg-color">
-                <span>ახსნა</span>
-              </div>
-            </button>
+                class="flex-box al-center justify-center btn bg-color hover-tooltip run-audio"
+              >
+                Run
+                <div class="tooltip__container bg-color">
+                  <span>ახსნა</span>
+                </div>
+              </button>
           </div>
 
           <div class="gray-line"></div>
@@ -977,7 +977,14 @@
       },
       false
     )
-
+    const runBtn = document.querySelector('.run-audio')
+    runBtn.addEventListener('click', ()=>{
+      if(audio.paused){
+        document.querySelector('.controls .toggle-play').classList.remove('play')
+        document.querySelector('.controls .toggle-play').classList.add('pause')
+        audio.play()
+      }
+    })
     audioPlayer
       .querySelector('.volume-button')
       .addEventListener('click', () => {

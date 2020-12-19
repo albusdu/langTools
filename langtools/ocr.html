@@ -31,69 +31,69 @@
           </a>
         </div>
         <div class="container-tools imgUploadTabsContainer">
-          <div class="frst hover-tooltip">
-            <!-- <div class="ttl">Upload Image</div> -->
-            <div class="imgUplBtnContainer">
-              <button class="imgUplBtn">Browse</button>
-              <input type="file" class="uploadInput" id="uploadInput" />
-            </div>
-            <div class="imgUploadTtlOuter hover-tooltip">
-              <div class="imgUploadTtlOuterHeight">
-                <div class="imgUplBtn imgUploadTtl">
-                  <span></span>
-                  <i class="closeImgUpload">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                    >
+          <div class="upload-block">
+            <form class="left">
+              <div>
+                <input type="file" id="files_input_field" name="files" multiple class="inputfield_upload" onchange="upload_files();"/>
+                <button type="button" id="select_and_upload_button" class="upload hoverColor path-color">
+                  <svg
+                    class="fill-color-hovered"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <g id="Upload" transform="translate(-16 -68)">
                       <path
                         id="path"
-                        d="M19,6.4,17.6,5,12,10.6,6.4,5,5,6.4,10.6,12,5,17.6,6.4,19,12,13.4,17.6,19,19,17.6,13.4,12Z"
-                        transform="translate(-5 -5)"
+                        d="M24,0H0V-24H24Z"
+                        transform="translate(16 92)"
+                        fill="none"
                         fill-rule="evenodd"
-                        opacity="0.54"
                       />
-                    </svg>
-                  </i>
+                      <path
+                        id="ic_upload"
+                        d="M19.4-14A7.526,7.526,0,0,0,12-20a7.315,7.315,0,0,0-6.6,4A6.055,6.055,0,0,0,0-10,6.018,6.018,0,0,0,6-4H19a4.951,4.951,0,0,0,5-5,5.09,5.09,0,0,0-4.6-5ZM14-11v4H10v-4H7l5-5,5,5Z"
+                        transform="translate(16 92)"
+                        fill="#eb4d4b"
+                        fill-rule="evenodd"
+                      />
+                    </g>
+                  </svg>
+                </button>
+                <div class="imgUploadTtlOuter">
+                  <div class="imgUploadTtlOuterHeight">
+                    <div class="imgUplBtn imgUploadTtl">
+                      <span></span>
+                      <i class="closeImgUpload">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                        >
+                          <path
+                            id="path"
+                            d="M19,6.4,17.6,5,12,10.6,6.4,5,5,6.4,10.6,12,5,17.6,6.4,19,12,13.4,17.6,19,19,17.6,13.4,12Z"
+                            transform="translate(-5 -5)"
+                            fill-rule="evenodd"
+                            opacity="0.54"
+                          />
+                        </svg>
+                      </i>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="tooltip__container bg-color">
-              <span>ახსნა</span>
-            </div>
-          </div>
-          <div class="frst hover-tooltip">
-            <button class="imgUplBtn uplMainBtn hoverColor">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="16"
-                viewBox="0 0 24 16"
-                class="path-color"
-              >
-                <path
-                  id="ic_upload"
-                  d="M19.4-14A7.526,7.526,0,0,0,12-20a7.315,7.315,0,0,0-6.6,4A6.055,6.055,0,0,0,0-10,6.018,6.018,0,0,0,6-4H19a4.951,4.951,0,0,0,5-5,5.09,5.09,0,0,0-4.6-5ZM14-11v4H10v-4H7l5-5,5,5Z"
-                  transform="translate(0 20)"
-                  fill="#eb4d4b"
-                  fill-rule="evenodd"
-                />
-              </svg>
-              Upload Image
-            </button>
-            <div class="tooltip__container bg-color">
-              <span>ახსნა</span>
-            </div>
-          </div>
-          <div class="frst hover-tooltip">
-            <button class="recognizedBtn imgUplBtn bg-color">
-              Recognized Text
-            </button>
-            <div class="tooltip__container bg-color">
-              <span>ახსნა</span>
-            </div>
+              <div class="frst border-left-0 hover-tooltip">
+                <button class="recognizedBtn imgUplBtn bg-color">
+                  Recognized Text
+                </button>
+                <div class="tooltip__container bg-color">
+                  <span>ახსნა</span>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
         <div class="header-left flex-box">
