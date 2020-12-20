@@ -10,7 +10,6 @@
   transition: 0.6s;
   width: 100%;
   position: fixed;
-  z-index: 11;
 }
 .border-left-0{
   border-left: 0!important;
@@ -1003,6 +1002,7 @@ body.color-skyBlue .bg-color-fade {
   display: none;
 }
 header {
+  z-index: 999;
   &.header-active {
     .header-visible {
       .container-tools {
@@ -1253,7 +1253,7 @@ main.container {
             }
           }
           .other-languages {
-            z-index: 4;
+            z-index: 99;
             right: 0;
           }
         }

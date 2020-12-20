@@ -3930,8 +3930,13 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
   background: #ffffff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 116px;
+  z-index: 998;
+  padding-top: 15px;
 }
 
 .tasksPageHeader .left h2,
@@ -4336,11 +4341,11 @@ input[type='number'] {
 
 .leftInner.tbHead {
   overflow: hidden;
-  z-index: 8;
+  z-index: 99;
   border: none;
   position: -webkit-sticky;
   position: sticky;
-  top: 116px;
+  top: 221px;
 }
 
 .leftInner.tbHead .colTxt {
@@ -4842,21 +4847,12 @@ button.disabled {
 
 /*ipad pro*/
 @media (max-width: 1365px) {
-  .leftInner.tbHead {
-    position: relative;
-    top: 0px;
-  }
   .taskPageContent .right {
     width: 340px;
   }
   .taskPageContent .left {
     width: calc(100% - 340px);
     overflow: auto;
-  }
-  .taskPageContent .leftInner {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
   }
   .ocrContainer h2,
   .ocrContainer h2 span {
@@ -5554,7 +5550,6 @@ button.disabled {
   transition: 0.6s;
   width: 100%;
   position: fixed;
-  z-index: 11;
 }
 
 .border-left-0 {
@@ -6771,6 +6766,10 @@ li {
 
 .tabsContainer {
   display: none;
+}
+
+header {
+  z-index: 999;
 }
 
 @media (max-width: 1023px) {

@@ -11,16 +11,129 @@
       sizes="16x16"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      :root {
+        --bg-main-color: #3583bc;
+        --toned-down-white: #f1f1f1;
+        --highlight-main: #8167a9;
+      }
+      .rootMain{
+        background: var(--bg-main-color);
+      }
+      .has-submenu.active a.open-inside-nav{
+        color: var(--bg-main-color)!important;
+      }
+      .stroke-color path{
+        stroke: var(--bg-main-color)!important;
+      }
+      .path-color path{
+        fill: var(--bg-main-color)!important;
+      }
+      .hoverColor:hover, .hoverColor.active{
+        color: var(--bg-main-color)!important;
+      }
+      .hoverColor:hover .path-color-hovered path, .hoverColor.active .path-color-hovered path{
+        fill: var(--bg-main-color)!important;
+      }
+      main.container .sidebar__container__topbar{
+        padding-top: 5px;
+      }
+      .other-languages a:hover{
+        background: var(--bg-main-color);
+        color: #fff;
+      }
+      .active span,.has-submenu.active a.open-inside-nav{
+        color: var(--bg-main-color)!important;
+      }
+      body {
+        overflow:hidden;
+      }
+      .switch__container{
+        height: 36px;
+        width: 67px;
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+      /* sets the size the switch's body, this is the label element, and our container */
+        .switch {
+          position: relative;
+          display: flex;
+          width: 50px;
+          height: 6px;
+        }
+
+        /* hides the checkbox's default ticking box, we don't need to show it, we only need it's "checked" functionality to keep track of when user clicks*/
+        .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        /* this is a span nested inside label container, that takes the width and position of its container */
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          width: inherit;
+          height: inherit;
+          background-color: var(--bg-main-color);
+          transition: 0.4s;
+        }
+
+        /* this is the toggle circle that moves, setting its inital position and size */
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 20px;
+          width: 20px;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: var(--bg-main-color);
+          transition: 0.4s;
+          color: var(--highlight-main);
+          font-size: 10px;
+        }
+
+        /* color change on slider circle when input container is clicked.because label element is container, clicking anywhere in it triggers input:checked */
+        input:checked + .slider {
+          background-color: var(--bg-main-color);
+        }
+
+        /* when input is focused show shadow on slider */
+        input:focus + .slider {
+          box-shadow: 0 0 1px #2196f3;
+        }
+
+        /* when label cointainer is clicked change toggle circle color, and move it to the right */
+        input:checked + .slider:before {
+          background-color: var(--bg-main-color);
+          content: "";
+          transform: translate(31px, -50%);
+        }
+
+        /* make the label container rounded*/
+        .slider.round {
+          border-radius: 34px;
+        }
+
+        /* make the roggle circle round */
+        .slider.round:before {
+          border-radius: 50%;
+        }
+    </style>
   </head>
 
-  <body class="color-red">
+  <body class="">
     <header class="header container header-active">
       <div class="header-visible flex-box al-center between">
         <div class="header-right flex-box between">
           <div class="burger flex-box column justify-center" id="burger">
-            <span class="bg-color"></span>
-            <span class="bg-color"></span>
-            <span class="bg-color"></span>
+            <span class="rootMain"></span>
+            <span class="rootMain"></span>
+            <span class="rootMain"></span>
           </div>
           <a href="#" class="logo-container flex-box column">
             <img
@@ -156,7 +269,8 @@
       <nav class="sidebar">
         <div class="sidebar__container">
           <div class="sidebar__container__topbar">
-            <div class="color-control">
+            <!-- <div class="color-control">
+            
               <div class="flex-box color-status al-center">
                 <div class="color-example bg-color"></div>
                 <div class="color-name text-color">Color</div>
@@ -219,6 +333,12 @@
                   <div class="color-name">Sky Blue</div>
                 </li>
               </ul>
+            </div> -->
+            <div class='switch__container'>
+              <label class="switch">
+                  <input type="checkbox" id="toggleBtn">
+                  <span class="slider round"></span>
+              </label>
             </div>
             <div class="language-box">
               <div class="languages flex-box al-center column">
@@ -596,4 +716,41 @@
   ></script>
   <script src="js/script.js"></script>
   <script src="js/ali.js"></script>
+  <script>
+    window.onload = function() {
+  let toggleBtn = document.getElementById("toggleBtn");
+  toggleBtn.onclick = toggleTheme;
+  toggleBtn.onkeypress = handleKeyPress;
+
+  function toggleTheme(e) {
+    //calls changeTheme and passes true or false depending on the state of checkbox "checked"
+    changeTheme(e.target.checked);
+  }
+
+  function changeTheme(theme) {
+    //reverses css custom var colors
+    if (!theme) {
+      document.documentElement.style.setProperty("--bg-main-color", "#3583bc");
+      document.documentElement.style.setProperty(
+        "--toned-down-white",
+        "#f1f1f1"
+      );
+    } else {
+      document.documentElement.style.setProperty("--bg-main-color", "#fb351f");
+      document.documentElement.style.setProperty(
+        "--toned-down-white",
+        "#1f2029"
+      );
+    }
+  }
+  function handleKeyPress(e) {
+    //handles enter keypress
+    let toggleBtn = document.getElementById("toggleBtn");
+    if (e.keyCode === 13) {
+      toggleBtn.click();
+    }
+  }
+};
+
+  </script>
 </html>

@@ -571,8 +571,12 @@ footer {
 .tasksPageHeader {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
   background: #ffffff;
+  position: sticky;
+  top: 116px;
+  z-index: 998;
+  padding-top: 15px;
 }
 .tasksPageHeader .left h2,
 .tasksPageHeader .left h2 span {
@@ -854,10 +858,10 @@ input[type='number'] {
 }
 .leftInner.tbHead {
   overflow: hidden;
-  z-index: 8;
+  z-index: 99;
   border: none;
   position: sticky;
-  top: 116px;
+  top:221px;
 }
 .leftInner.tbHead .colTxt {
   opacity: 0;
@@ -1189,19 +1193,16 @@ button.disabled {
 }
 /*ipad pro*/
 @media (max-width: 1365px) {
-  .leftInner.tbHead {
-    position: relative;
-    top: 0px;
-  }
+  // .leftInner.tbHead {
+  //   position: relative;
+  //   top: 0px;
+  // }
   .taskPageContent .right {
     width: 340px;
   }
   .taskPageContent .left {
     width: calc(100% - 340px);
     overflow: auto;
-  }
-  .taskPageContent .leftInner {
-    width: fit-content;
   }
   .ocrContainer h2,
   .ocrContainer h2 span {
